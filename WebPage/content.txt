@@ -1,0 +1,29 @@
+이름 : 신미래
+
+한 줄 소개: 감각을 시스템으로 바꾸는 크리에이터.
+
+소개: 그래픽 및 영상 디자이너 경력을 바탕으로 AI, 3D, 실시간 엔진을 제작 흐름에 연결합니다. Adobe 기반의 시각 콘텐츠 제작 경험 위에 Unity, Godot, Blender 등으로 작업 영역을 넓혀왔습니다. 반복적인 작업을 줄이고, 새로운 기술을 효율적으로 접목해 더 좋은 결과를 만드는 일을 좋아합니다.
+
+핵심 강점:
+- Adobe Photoshop
+- Illustrator
+- Premiere Pro
+- After Effects
+- Unity
+- Godot
+- Blender
+
+프로젝트:
+1.프로젝트명: 1인창작 팬게임 제작 프로젝트
+설명: 밴드 DAY6의 팬게임을 만들었습니다. 티저영상도 직접 제작해 홍보하였습니다. 2D픽셀 플랫포머 장르.
+사용 툴: Godot엔진, SORA, Adobe Photoshop, After Effects
+주소: https://wouldyoubemyday.itch.io/galaxy-is-an-excuse
+
+2.프로젝트명: beauty product Instastory motiongraphics
+설명: 인스타그램의 짧은 동영상 기능인 인스타스토리용 영상을 제작하였습니다.
+사용 툴: Adobe Photoshop, After Effects, chatGPT
+
+등등 여러 건. 추후 추가 예정.
+
+Contact
+이메일: miraetto@gmail.com
