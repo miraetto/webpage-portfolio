@@ -5,6 +5,8 @@ type ArchiveItemProps = {
 };
 
 export function ArchiveItem({ item }: ArchiveItemProps) {
+  const sourceType = item.src.endsWith(".mp4") ? "video/mp4" : undefined;
+
   return (
     <article className="group surface-card overflow-hidden transition-transform duration-300 hover:-translate-y-1">
       <div className="relative aspect-[9/16] overflow-hidden bg-black">
@@ -16,7 +18,7 @@ export function ArchiveItem({ item }: ArchiveItemProps) {
           preload="metadata"
           poster={item.posterSrc}
         >
-          <source src={item.src} type="video/mp4" />
+          <source src={item.src} type={sourceType} />
         </video>
 
         <div className="pointer-events-none absolute left-4 top-4 rounded-lg bg-black/60 px-3 py-1 text-xs tracking-[0.12em] text-white">

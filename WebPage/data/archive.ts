@@ -89,5 +89,13 @@ export const archiveEntries: ArchiveEntry[] = [
     mediaType: "video",
     src: "/videos/magical-girl-transformation.mp4",
     aspectRatio: "portrait"
+  },
+  {
+    slug: "blender-camera-motion",
+    title: "Blender Camera Motion",
+    category: "3D 모션",
+    mediaType: "video",
+    src: "/videos/blender-camera-motion.mkv",
+    aspectRatio: "portrait"
   }
 ];

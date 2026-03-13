@@ -10,7 +10,6 @@ export const projects: Project[] = [
     href: "https://wouldyoubemyday.itch.io/galaxy-is-an-excuse",
     mediaType: "video",
     mediaSrc: "/videos/day6-teaser.mp4",
-    posterSrc: "/images/game.webp",
     aspectRatio: "landscape"
   },
   {

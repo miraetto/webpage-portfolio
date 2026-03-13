@@ -14,6 +14,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
     project.aspectRatio === "portrait"
       ? "mx-auto aspect-[9/16] w-full max-w-[360px]"
       : "aspect-video w-full";
+  const sourceType = project.mediaSrc.endsWith(".mp4") ? "video/mp4" : undefined;
 
   return (
     <article className="surface-card overflow-hidden">
@@ -43,7 +44,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 preload="metadata"
                 poster={project.posterSrc}
               >
-                <source src={project.mediaSrc} type="video/mp4" />
+                <source src={project.mediaSrc} type={sourceType} />
               </video>
             )}
           </div>
