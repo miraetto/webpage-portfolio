@@ -1,4 +1,4 @@
-﻿import type { Capability, SiteData } from "@/types";
+import type { Capability, SiteData } from "@/types";
 
 export const site: SiteData = {
   name: "신미래",
@@ -7,8 +7,9 @@ export const site: SiteData = {
   intro:
     "그래픽 디자인과 모션을 기반으로, AI·3D·실시간 엔진을 연결해 더 효율적이고 완성도 높은 제작 흐름을 만듭니다.",
   about:
+    "그래픽과 모션 경험을 바탕으로, AI와 3D, 실시간 엔진을 연결한 작업 흐름을 설계합니다.",
+  highlight:
     "그래픽 및 영상 디자인 경험을 바탕으로, AI와 3D, 실시간 엔진을 제작 과정에 자연스럽게 연결해왔습니다. Adobe 기반의 시각 콘텐츠 제작 경험 위에 Unity, Godot, Blender 등으로 작업 영역을 넓혀왔으며, 반복적인 작업을 줄이고 더 나은 결과를 만드는 흐름을 설계하는 일을 좋아합니다.",
-  highlight: "디자인 감각과 제작 시스템을 함께 다룹니다.",
   email: "miraetto@gmail.com",
   itchUrl: "https://wouldyoubemyday.itch.io/galaxy-is-an-excuse",
   keywords: [
@@ -32,7 +33,7 @@ export const capabilities: Capability[] = [
   {
     title: "Visual",
     description: "브랜드와 화면의 첫 인상을 세밀하게 설계합니다.",
-    tools: ["Photoshop", "Illustrator"]
+    tools: ["Photoshop", "Illustrator", "ComfyUI"]
   },
   {
     title: "Motion",

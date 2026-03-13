@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { site } from "@/data/site";
 import { Container } from "@/components/ui/container";
 
@@ -26,7 +26,7 @@ export function Hero() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="whitespace-nowrap rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-sm text-muted"
+                  className="whitespace-nowrap rounded-xl border border-black/10 bg-white/70 px-3 py-1.5 text-sm text-muted"
                 >
                   {item.label}
                 </Link>
@@ -60,13 +60,13 @@ export function Hero() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
                   href="#projects"
-                  className="rounded-full bg-accent px-5 py-3 text-sm font-medium text-white transition-transform duration-300 hover:-translate-y-0.5"
+                  className="rounded-xl bg-accent px-5 py-3 text-sm font-medium text-white transition-transform duration-300 hover:-translate-y-0.5"
                 >
                   프로젝트 보기
                 </Link>
                 <Link
                   href="#contact"
-                  className="rounded-full border border-black/10 px-5 py-3 text-sm font-medium transition-colors hover:bg-white/70"
+                  className="rounded-xl border border-black/10 px-5 py-3 text-sm font-medium transition-colors hover:bg-white/70"
                 >
                   연락하기
                 </Link>
@@ -81,7 +81,6 @@ export function Hero() {
               <ul className="mt-6 space-y-4 text-sm leading-6 text-muted">
                 <li>디자인과 모션 감각을 바탕으로 메시지를 정리합니다.</li>
                 <li>AI와 실시간 엔진을 활용해 제작 흐름을 확장합니다.</li>
-                <li>미니멀한 화면 안에서 작업물이 가장 선명하게 보이도록 설계합니다.</li>
               </ul>
             </aside>
           </div>

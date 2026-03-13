@@ -9,6 +9,11 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const reverseLayout = index % 2 === 1;
+  const isPrimaryProject = index === 0;
+  const mediaAspect =
+    project.aspectRatio === "portrait"
+      ? "mx-auto aspect-[9/16] w-full max-w-[360px]"
+      : "aspect-video w-full";
 
   return (
     <article className="surface-card overflow-hidden">
@@ -19,7 +24,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         ].join(" ")}
       >
         <div className={reverseLayout ? "md:order-2" : ""}>
-          <div className="relative aspect-[4/3] overflow-hidden bg-black/5">
+          <div className={["relative overflow-hidden bg-black/5", mediaAspect].join(" ")}>
             {project.mediaType === "image" ? (
               <Image
                 src={project.mediaSrc}
@@ -74,7 +79,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 href={project.href}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 inline-flex items-center text-sm font-medium text-accent transition-opacity hover:opacity-70"
+                className={[
+                  "mt-6 inline-flex items-center px-4 py-2.5 text-sm font-medium transition-all",
+                  isPrimaryProject
+                    ? "rounded-xl bg-accent text-white shadow-soft hover:-translate-y-0.5"
+                    : "text-accent hover:opacity-70"
+                ].join(" ")}
               >
                 프로젝트 보기
               </Link>

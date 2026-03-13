@@ -1,4 +1,4 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -65,7 +65,7 @@ select {
 
 @layer components {
   .surface-card {
-    @apply rounded-[2rem] border border-black/10 bg-card shadow-soft backdrop-blur-sm;
+    @apply rounded-[1rem] border border-black/10 bg-card shadow-soft backdrop-blur-sm;
   }
 
   .section-anchor {
@@ -77,6 +77,6 @@ select {
   }
 
   .tag-pill {
-    @apply rounded-full border border-black/10 bg-white/60 px-3 py-1 text-sm text-muted;
+    @apply rounded-[0.75rem] border border-black/10 bg-white/60 px-3 py-1 text-sm text-muted;
   }
 }

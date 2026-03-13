@@ -1,4 +1,4 @@
-﻿export type NavItem = {
+export type NavItem = {
   href: string;
   label: string;
 };
@@ -18,6 +18,7 @@ export type Project = {
   mediaType: "image" | "video";
   mediaSrc: string;
   posterSrc?: string;
+  aspectRatio?: "landscape" | "portrait";
 };
 
 export type ArchiveEntry = {
@@ -27,6 +28,7 @@ export type ArchiveEntry = {
   mediaType: "image" | "video";
   src: string;
   posterSrc?: string;
+  aspectRatio?: "landscape" | "portrait";
 };
 
 export type SiteData = {

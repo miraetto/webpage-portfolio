@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { site } from "@/data/site";
 import { Container } from "@/components/ui/container";
 
@@ -29,7 +29,7 @@ export function Contact() {
                   href={site.itchUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex rounded-full border border-black/10 px-4 py-2 text-sm text-muted transition-colors hover:bg-white/70"
+                  className="inline-flex rounded-xl border border-black/10 px-4 py-2 text-sm text-muted transition-colors hover:bg-white/70"
                 >
                   대표 프로젝트 링크 보기
                 </Link>

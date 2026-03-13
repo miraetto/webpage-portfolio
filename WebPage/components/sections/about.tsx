@@ -1,4 +1,5 @@
-﻿import { site } from "@/data/site";
+import Image from "next/image";
+import { site } from "@/data/site";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -6,22 +7,28 @@ export function About() {
   return (
     <section id="about" className="section-anchor py-20 md:py-28">
       <Container>
-        <div className="grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(260px,0.9fr)] md:items-start">
-          <SectionHeading
-            label="About"
-            title="감각을 결과로 연결하는 방식"
-            description={site.about}
-          />
+        <SectionHeading label="About" title="감각을 결과로 연결하는 방식" />
+        <div className="mt-12 grid gap-6 md:grid-cols-[minmax(280px,380px)_minmax(0,1fr)] md:items-center">
+          <div className="surface-card overflow-hidden">
+            <div className="relative aspect-[4/5] overflow-hidden bg-black/5">
+              <Image
+                src="/images/m8s-squad.jpg"
+                alt="신미래 포트폴리오 소개 이미지"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 34vw"
+                priority
+              />
+            </div>
+          </div>
 
-          <div className="surface-card p-6 md:p-7">
-            <p className="eyebrow">Core Note</p>
-            <p className="mt-4 text-2xl font-semibold tracking-[-0.03em]">
+          <div className="surface-card p-6 md:p-8">
+            <p className="text-lg font-medium leading-8 md:text-2xl md:leading-10">
+              {site.about}
+            </p>
+            <p className="mt-4 text-sm leading-6 text-muted md:text-base">
               {site.highlight}
             </p>
-            <div className="mt-6 space-y-4 text-sm leading-6 text-muted md:text-base">
-              <p>반복적인 작업은 줄이고, 더 높은 완성도로 이어지는 흐름을 지향합니다.</p>
-              <p>툴을 많이 쓰는 것보다, 필요한 도구를 적절하게 연결하는 방식에 집중합니다.</p>
-            </div>
           </div>
         </div>
       </Container>
