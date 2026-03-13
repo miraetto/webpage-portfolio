@@ -97,5 +97,13 @@ export const archiveEntries: ArchiveEntry[] = [
     mediaType: "video",
     src: "/videos/blender-camera-motion.mkv",
     aspectRatio: "portrait"
+  },
+  {
+    slug: "unity-vfx-01",
+    title: "Unity VFX 01",
+    category: "VFX",
+    mediaType: "video",
+    src: "/videos/unity-vfx-01.mp4",
+    aspectRatio: "portrait"
   }
 ];
