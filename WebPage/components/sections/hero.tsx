@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { pageContent } from "@/data/content";
 import { site } from "@/data/site";
 import { Container } from "@/components/ui/container";
 
@@ -36,7 +37,7 @@ export function Hero() {
 
           <div
             id="hero"
-            className="section-anchor grid gap-12 px-5 py-14 md:grid-cols-[minmax(0,1.2fr)_320px] md:px-8 md:py-20"
+            className="section-anchor grid gap-12 px-5 py-14 md:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] md:px-8 md:py-20"
           >
             <div>
               <p className="eyebrow">
@@ -62,27 +63,31 @@ export function Hero() {
                   href="#projects"
                   className="rounded-xl bg-accent px-5 py-3 text-sm font-medium text-white transition-transform duration-300 hover:-translate-y-0.5"
                 >
-                  프로젝트 보기
+                  {pageContent.hero.primaryActionLabel}
                 </Link>
                 <Link
                   href="#contact"
                   className="rounded-xl border border-black/10 px-5 py-3 text-sm font-medium transition-colors hover:bg-white/70"
                 >
-                  연락하기
+                  {pageContent.hero.secondaryActionLabel}
                 </Link>
               </div>
             </div>
 
-            <aside className="surface-card h-fit p-6 md:p-7">
-              <p className="eyebrow">Approach</p>
-              <p className="mt-4 text-lg font-medium leading-8">
-                시각적 감각을 구조화하고, 작업 시스템으로 연결해 결과물의 밀도를 높입니다.
-              </p>
-              <ul className="mt-6 space-y-4 text-sm leading-6 text-muted">
-                <li>디자인과 모션 감각을 바탕으로 메시지를 정리합니다.</li>
-                <li>AI와 실시간 엔진을 활용해 제작 흐름을 확장합니다.</li>
-              </ul>
-            </aside>
+            <div className="surface-card h-fit overflow-hidden">
+              <div className="relative aspect-video overflow-hidden bg-black">
+                <video
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src="/videos/mirae-showreel.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

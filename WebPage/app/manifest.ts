@@ -1,10 +1,11 @@
-﻿import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+import { manifestContent } from "@/data/content";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "신미래 포트폴리오",
-    short_name: "Mirae",
-    description: "감각을 시스템으로 바꾸는 크리에이터 신미래의 포트폴리오",
+    name: manifestContent.name,
+    short_name: manifestContent.shortName,
+    description: manifestContent.description,
     start_url: "/",
     display: "standalone",
     background_color: "#f5f1ea",

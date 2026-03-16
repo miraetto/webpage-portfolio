@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageContent } from "@/data/content";
 import type { Project } from "@/types";
 
 type ProjectCardProps = {
@@ -87,7 +88,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                     : "text-accent hover:opacity-70"
                 ].join(" ")}
               >
-                프로젝트 보기
+                {pageContent.projects.viewProjectLabel}
               </Link>
             ) : null}
           </div>
