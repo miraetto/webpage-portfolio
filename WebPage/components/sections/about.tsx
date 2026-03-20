@@ -14,7 +14,7 @@ export function About() {
         />
         <div className="mt-12 grid gap-6 md:grid-cols-[minmax(280px,380px)_minmax(0,1fr)] md:items-center">
           <div className="surface-card overflow-hidden">
-            <div className="relative aspect-[4/5] overflow-hidden bg-black/5">
+            <div className="media-stage relative aspect-[4/5] bg-black/5">
               <Image
                 src="/images/m8s-squad.jpg"
                 alt={pageContent.about.imageAlt}

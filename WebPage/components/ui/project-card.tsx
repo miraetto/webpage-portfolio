@@ -26,7 +26,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         ].join(" ")}
       >
         <div className={reverseLayout ? "md:order-2" : ""}>
-          <div className={["relative overflow-hidden bg-black/5", mediaAspect].join(" ")}>
+          <div className={["media-stage relative bg-black/5", mediaAspect].join(" ")}>
             {project.mediaType === "image" ? (
               <Image
                 src={project.mediaSrc}
@@ -84,7 +84,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 className={[
                   "mt-6 inline-flex items-center px-4 py-2.5 text-sm font-medium transition-all",
                   isPrimaryProject
-                    ? "rounded-xl bg-accent text-white shadow-soft hover:-translate-y-0.5"
+                    ? "action-primary text-white hover:-translate-y-0.5"
                     : "text-accent hover:opacity-70"
                 ].join(" ")}
               >

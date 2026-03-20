@@ -199,7 +199,7 @@ export const pageContent = {
   },
   about: {
     sectionLabel: "About",
-    sectionTitle: "감각을 결과로 연결하는 방식",
+    sectionTitle: "그래픽에서 실시간까지, 하나의 흐름",
     imageAlt: "신미래 포트폴리오 소개 이미지"
   },
   capabilities: {
@@ -208,7 +208,7 @@ export const pageContent = {
   },
   projects: {
     sectionLabel: "Projects",
-    sectionTitle: "Selected Motion Projects",
+    sectionTitle: "Projects",
     viewProjectLabel: "프로젝트 보기"
   },
   archive: {

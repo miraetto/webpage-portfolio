@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="section-anchor relative pt-6">
       <Container>
-        <div className="surface-card overflow-hidden">
+        <div className="surface-card hero-shell overflow-hidden">
           <header className="border-b border-black/10 px-5 py-4 md:px-8">
             <div className="flex items-center justify-between gap-6">
               <Link href="#hero" className="text-sm font-medium tracking-[0.08em]">
@@ -43,7 +43,7 @@ export function Hero() {
               <p className="eyebrow">
                 {site.name} · {site.nameEn}
               </p>
-              <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.05em] md:text-6xl md:leading-[1.02]">
+              <h1 className="headline-display mt-5 max-w-4xl text-4xl md:text-6xl">
                 {site.headline}
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-7 text-muted md:text-lg md:leading-8">
@@ -61,21 +61,22 @@ export function Hero() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
                   href="#projects"
-                  className="rounded-xl bg-accent px-5 py-3 text-sm font-medium text-white transition-transform duration-300 hover:-translate-y-0.5"
+                  className="action-primary px-5 py-3 text-sm font-medium text-white transition-transform duration-300 hover:-translate-y-0.5"
                 >
                   {pageContent.hero.primaryActionLabel}
                 </Link>
                 <Link
                   href="#contact"
-                  className="rounded-xl border border-black/10 px-5 py-3 text-sm font-medium transition-colors hover:bg-white/70"
+                  className="action-secondary px-5 py-3 text-sm font-medium transition-colors hover:bg-white/80"
                 >
                   {pageContent.hero.secondaryActionLabel}
                 </Link>
               </div>
             </div>
 
-            <div className="surface-card h-fit overflow-hidden">
-              <div className="relative aspect-video overflow-hidden bg-black">
+            <div className="surface-card hero-reel-shell h-fit">
+              <span className="gel-badge floating-gel-badge">Show Reel</span>
+              <div className="hero-reel-frame media-stage aspect-video">
                 <video
                   className="h-full w-full object-cover"
                   autoPlay

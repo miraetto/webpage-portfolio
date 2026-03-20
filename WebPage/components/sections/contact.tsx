@@ -9,7 +9,7 @@ export function Contact() {
       <Container>
         <div className="surface-card px-5 py-12 md:px-8 md:py-14">
           <p className="eyebrow">{pageContent.contact.sectionLabel}</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] md:text-5xl">
+          <h2 className="headline-display mt-3 text-[2rem] md:text-[3.2rem]">
             {pageContent.contact.sectionTitle}
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-muted md:text-lg">
