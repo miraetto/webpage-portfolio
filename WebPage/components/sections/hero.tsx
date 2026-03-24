@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="section-anchor relative pt-6">
       <Container>
-        <div className="surface-card hero-shell overflow-hidden">
+        <div className="surface-card editorial-shell hero-shell overflow-hidden">
           <header className="border-b border-black/10 px-5 py-4 md:px-8">
             <div className="flex items-center justify-between gap-6">
               <Link href="#hero" className="text-sm font-medium tracking-[0.08em]">
@@ -74,7 +74,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="surface-card hero-reel-shell h-fit">
+            <div className="surface-card editorial-shell hero-reel-shell h-fit">
               <span className="gel-badge floating-gel-badge">Show Reel</span>
               <div className="hero-reel-frame media-stage aspect-video">
                 <video

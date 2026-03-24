@@ -6,7 +6,7 @@ type CapabilityCardProps = {
 
 export function CapabilityCard({ capability }: CapabilityCardProps) {
   return (
-    <article className="surface-card h-full p-6 md:p-7">
+    <article className="surface-card editorial-shell h-full p-6 md:p-7">
       <p className="text-lg font-semibold">{capability.title}</p>
       <p className="mt-3 text-sm leading-6 text-muted md:text-base">
         {capability.description}

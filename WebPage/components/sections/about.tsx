@@ -13,7 +13,7 @@ export function About() {
           title={pageContent.about.sectionTitle}
         />
         <div className="mt-12 grid gap-6 md:grid-cols-[minmax(280px,380px)_minmax(0,1fr)] md:items-center">
-          <div className="surface-card overflow-hidden">
+          <div className="surface-card editorial-shell overflow-hidden">
             <div className="media-stage relative aspect-[4/5] bg-black/5">
               <Image
                 src="/images/m8s-squad.jpg"
@@ -26,7 +26,7 @@ export function About() {
             </div>
           </div>
 
-          <div className="surface-card p-6 md:p-8">
+          <div className="surface-card editorial-shell p-6 md:p-8">
             <p className="text-lg font-medium leading-8 md:text-2xl md:leading-10">
               {site.about}
             </p>

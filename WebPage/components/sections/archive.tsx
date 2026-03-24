@@ -1,7 +1,7 @@
 import { pageContent } from "@/data/content";
 import { archiveEntries } from "@/data/archive";
 import { Container } from "@/components/ui/container";
-import { ArchiveItem } from "@/components/ui/archive-item";
+import { ArchiveGallery } from "@/components/sections/archive-gallery";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 export function Archive() {
@@ -12,11 +12,7 @@ export function Archive() {
           label={pageContent.archive.sectionLabel}
           title={pageContent.archive.sectionTitle}
         />
-        <div className="mt-12 grid items-start grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          {archiveEntries.map((item) => (
-            <ArchiveItem key={item.slug} item={item} />
-          ))}
-        </div>
+        <ArchiveGallery items={archiveEntries} />
       </Container>
     </section>
   );

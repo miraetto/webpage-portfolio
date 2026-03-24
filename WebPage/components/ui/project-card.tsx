@@ -18,7 +18,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   const sourceType = project.mediaSrc.endsWith(".mp4") ? "video/mp4" : undefined;
 
   return (
-    <article className="surface-card overflow-hidden">
+    <article className="surface-card editorial-shell overflow-hidden">
       <div
         className={[
           "grid gap-0 md:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)]",

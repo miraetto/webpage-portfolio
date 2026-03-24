@@ -7,12 +7,9 @@ export function Contact() {
   return (
     <section id="contact" className="section-anchor py-20 md:py-28">
       <Container>
-        <div className="surface-card px-5 py-12 md:px-8 md:py-14">
+        <div className="surface-card editorial-shell px-5 py-12 md:px-8 md:py-14">
           <p className="eyebrow">{pageContent.contact.sectionLabel}</p>
-          <h2 className="headline-display mt-3 text-[2rem] md:text-[3.2rem]">
-            {pageContent.contact.sectionTitle}
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-muted md:text-lg">
+          <p className="mt-3 max-w-2xl text-base leading-7 text-muted md:text-lg">
             {pageContent.contact.description}
           </p>
 
