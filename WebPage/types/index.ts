@@ -24,6 +24,7 @@ export type Project = {
 export type ArchiveEntry = {
   slug: string;
   title: string;
+  description?: string;
   category: string;
   mediaType: "image" | "video";
   src: string;

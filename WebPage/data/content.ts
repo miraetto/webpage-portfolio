@@ -80,7 +80,8 @@ export const projects: Project[] = [
 export const archiveEntries: ArchiveEntry[] = [
   {
     slug: "day6-teaser",
-    title: "DAY6 Fan Game Teaser",
+    title: "Game Teaser",
+    description: "Sora + Godot + After Effects",
     category: "티저",
     mediaType: "video",
     src: "/videos/day6-teaser.mp4",
@@ -89,7 +90,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "bf-instastory-1",
-    title: "BF Instastory 01",
+    title: "인스타스토리 디자인 / 모션그래픽",
+    description: "Illustrator + After Effects",
     category: "브랜드 모션",
     mediaType: "video",
     src: "/videos/bf-instastory-1.mp4",
@@ -97,7 +99,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "cmf-instastory",
-    title: "CMF Instastory 03",
+    title: "인스타스토리 디자인 / 인포그래픽 / 제품 촬영·보정",
+    description: "Photoshop + After Effects",
     category: "브랜드 모션",
     mediaType: "video",
     src: "/videos/cmf-instastory03.mp4",
@@ -105,7 +108,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "dhl-page1",
-    title: "DHL Story Frame",
+    title: "인스타스토리 디자인 / 텍스트이펙트 / 모델 촬영·보정",
+    description: "Illustrator + Photoshop + After Effects",
     category: "브랜드 모션",
     mediaType: "video",
     src: "/videos/dhl-page1.mp4",
@@ -113,7 +117,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "flc-instastory",
-    title: "FLC Instastory 01",
+    title: "인스타스토리 디자인 / 텍스트이펙트 / 제품 촬영·보정",
+    description: "Photoshop + After Effects",
     category: "브랜드 모션",
     mediaType: "video",
     src: "/videos/flc-instastory-1.mp4",
@@ -121,7 +126,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "ggl-day2-page3",
-    title: "GGL Day 2 Page 3",
+    title: "인스타스토리 디자인 / 모션그래픽 / 모델 촬영·보정",
+    description: "Illustrator + Photoshop + After Effects",
     category: "소셜 모션",
     mediaType: "video",
     src: "/videos/ggl-day2-page3.mp4",
@@ -129,7 +135,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "gss-day1-page1",
-    title: "GSS Day 1 Page 1",
+    title: "인스타스토리 디자인 / 모션그래픽 / 제품 촬영·보정",
+    description: "Illustrator + Photoshop + After Effects",
     category: "소셜 모션",
     mediaType: "video",
     src: "/videos/gss-day1-page1.mp4",
@@ -137,7 +144,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "instastory-page2",
-    title: "Instastory Page 02",
+    title: "영상 기획 / 촬영·보정 / 편집",
+    description: "Premiere Pro + After Effects",
     category: "소셜 모션",
     mediaType: "video",
     src: "/videos/instastory-page2.mp4",
@@ -145,7 +153,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "scs-instastory-page3",
-    title: "SCS Instastory Page 03",
+    title: "인스타스토리 디자인 / AI 이미지 편집 / 모션그래픽 / 제품 촬영·보정",
+    description: "Illustrator + Photoshop + After Effects",
     category: "소셜 모션",
     mediaType: "video",
     src: "/videos/scs-instastory-page3.mp4",
@@ -153,7 +162,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "untitled-2",
-    title: "Untitled Motion Study",
+    title: "웹 배너 디자인",
+    description: "Illustrator + Photoshop",
     category: "모션 스터디",
     mediaType: "video",
     src: "/videos/untitled-2.mp4",
@@ -161,7 +171,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "magical-girl-transformation",
-    title: "마법소녀 변신 장면",
+    title: "Blender 시퀀스",
+    description: "Blender + After Effects",
     category: "실험 영상",
     mediaType: "video",
     src: "/videos/magical-girl-transformation.mp4",
@@ -169,7 +180,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "blender-camera-motion",
-    title: "Blender Camera Motion",
+    title: "Blender 카메라 모션",
+    description: "Blender + After Effects",
     category: "3D 모션",
     mediaType: "video",
     src: "/videos/blender-camera-motion.mkv",
@@ -177,7 +189,8 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "unity-vfx-01",
-    title: "Unity VFX 01",
+    title: "Unity VFX",
+    description: "Unity",
     category: "VFX",
     mediaType: "video",
     src: "/videos/unity-vfx-01.mp4",

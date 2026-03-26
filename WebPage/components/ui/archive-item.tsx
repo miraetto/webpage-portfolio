@@ -79,7 +79,14 @@ export function ArchiveItem({ item }: ArchiveItemProps) {
         </div>
       </div>
       <div className="p-4">
-        <h3 className="text-base font-medium md:text-lg">{item.title}</h3>
+        <h3 className="text-sm font-medium leading-6 md:text-[0.95rem]">
+          {item.title}
+        </h3>
+        {item.description ? (
+          <p className="mt-1 text-xs leading-5 text-[var(--muted)] md:text-[0.8rem]">
+            {item.description}
+          </p>
+        ) : null}
       </div>
     </article>
   );

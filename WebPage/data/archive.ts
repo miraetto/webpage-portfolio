@@ -17,8 +17,42 @@ const CATEGORY_BY_SLUG: Record<string, ArchiveEntry["category"]> = {
   "unity-vfx-01": "VFX"
 };
 
-export const archiveEntries: ArchiveEntry[] = rawArchiveEntries.map((item) => ({
-  ...item,
-  category: CATEGORY_BY_SLUG[item.slug] ?? item.category,
-  posterSrc: undefined
-}));
+const PRIORITY_ORDER = [
+  "day6-teaser",
+  "scs-instastory-page3",
+  "gss-day1-page1",
+  "instastory-page2",
+  "blender-camera-motion",
+  "ggl-day2-page3"
+] as const;
+
+const PRIORITY_INDEX = new Map<string, number>(
+  PRIORITY_ORDER.map((slug, index) => [slug, index] as const)
+);
+
+export const archiveEntries: ArchiveEntry[] = rawArchiveEntries
+  .map((item, index) => ({
+    ...item,
+    category: CATEGORY_BY_SLUG[item.slug] ?? item.category,
+    posterSrc: undefined,
+    originalIndex: index
+  }))
+  .sort((a, b) => {
+    const aPriority = PRIORITY_INDEX.get(a.slug);
+    const bPriority = PRIORITY_INDEX.get(b.slug);
+
+    if (aPriority !== undefined && bPriority !== undefined) {
+      return aPriority - bPriority;
+    }
+
+    if (aPriority !== undefined) {
+      return -1;
+    }
+
+    if (bPriority !== undefined) {
+      return 1;
+    }
+
+    return a.originalIndex - b.originalIndex;
+  })
+  .map(({ originalIndex, ...item }) => item);
