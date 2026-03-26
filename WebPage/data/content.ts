@@ -71,8 +71,7 @@ export const projects: Project[] = [
       "인스타스토리 포맷에 맞춘 짧은 모션그래픽 콘텐츠를 제작했습니다. 제한된 시간 안에서 제품의 인상과 메시지가 분명하게 전달되도록 화면 구성과 리듬을 설계했습니다.",
     tools: ["Photoshop", "After Effects", "ChatGPT"],
     mediaType: "video",
-    mediaSrc: "/videos/bf-instastory-1.mp4",
-    posterSrc: "/images/radiant-matte.jpg",
+    mediaSrc: "/videos/scs-instastory-page3.mp4",
     aspectRatio: "portrait"
   }
 ];
