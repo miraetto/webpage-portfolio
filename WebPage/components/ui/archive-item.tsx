@@ -5,12 +5,17 @@ import type { ArchiveEntry } from "@/types";
 
 type ArchiveItemProps = {
   item: ArchiveEntry;
+  isPinned: boolean;
+  onTogglePin: () => void;
 };
 
-export function ArchiveItem({ item }: ArchiveItemProps) {
+export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
   const sourceType = item.src.endsWith(".mp4") ? "video/mp4" : undefined;
   const videoRef = useRef<HTMLVideoElement>(null);
   const [canHoverPreview, setCanHoverPreview] = useState(false);
+  const [generatedPoster, setGeneratedPoster] = useState<string | undefined>(
+    item.posterSrc
+  );
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
@@ -29,8 +34,77 @@ export function ArchiveItem({ item }: ArchiveItemProps) {
     return () => mediaQuery.removeListener(updateMatch);
   }, []);
 
-  const startPreview = () => {
+  useEffect(() => {
+    if (item.mediaType !== "video" || item.posterSrc) {
+      setGeneratedPoster(item.posterSrc);
+      return;
+    }
+
+    let isCancelled = false;
+    const previewVideo = document.createElement("video");
+    previewVideo.src = item.src;
+    previewVideo.muted = true;
+    previewVideo.playsInline = true;
+    previewVideo.preload = "auto";
+
+    const captureFrame = () => {
+      if (
+        isCancelled ||
+        previewVideo.videoWidth === 0 ||
+        previewVideo.videoHeight === 0
+      ) {
+        return;
+      }
+
+      const canvas = document.createElement("canvas");
+      canvas.width = previewVideo.videoWidth;
+      canvas.height = previewVideo.videoHeight;
+
+      const context = canvas.getContext("2d");
+      if (!context) {
+        return;
+      }
+
+      context.drawImage(previewVideo, 0, 0, canvas.width, canvas.height);
+      setGeneratedPoster(canvas.toDataURL("image/jpeg", 0.82));
+    };
+
+    const handleLoadedData = () => {
+      captureFrame();
+    };
+
+    previewVideo.addEventListener("loadeddata", handleLoadedData);
+    previewVideo.load();
+
+    return () => {
+      isCancelled = true;
+      previewVideo.pause();
+      previewVideo.removeEventListener("loadeddata", handleLoadedData);
+      previewVideo.removeAttribute("src");
+      previewVideo.load();
+    };
+  }, [item.mediaType, item.posterSrc, item.src]);
+
+  useEffect(() => {
     if (!canHoverPreview || !videoRef.current) {
+      return;
+    }
+
+    const video = videoRef.current;
+
+    if (isPinned) {
+      void video.play().catch(() => {
+        // Ignore autoplay failures and keep the current frame visible.
+      });
+      return;
+    }
+
+    video.pause();
+    video.currentTime = 0;
+  }, [canHoverPreview, isPinned]);
+
+  const startPreview = () => {
+    if (!canHoverPreview || !videoRef.current || isPinned) {
       return;
     }
 
@@ -42,13 +116,21 @@ export function ArchiveItem({ item }: ArchiveItemProps) {
   };
 
   const stopPreview = () => {
-    if (!canHoverPreview || !videoRef.current) {
+    if (!canHoverPreview || !videoRef.current || isPinned) {
       return;
     }
 
     const video = videoRef.current;
     video.pause();
     video.currentTime = 0;
+  };
+
+  const togglePinnedPlayback = () => {
+    if (!canHoverPreview) {
+      return;
+    }
+
+    onTogglePin();
   };
 
   return (
@@ -59,7 +141,18 @@ export function ArchiveItem({ item }: ArchiveItemProps) {
         onMouseLeave={stopPreview}
         onFocus={startPreview}
         onBlur={stopPreview}
+        onClick={togglePinnedPlayback}
+        onKeyDown={(event) => {
+          if (event.key !== "Enter" && event.key !== " ") {
+            return;
+          }
+
+          event.preventDefault();
+          togglePinnedPlayback();
+        }}
         tabIndex={0}
+        role="button"
+        aria-pressed={isPinned}
       >
         <video
           ref={videoRef}
@@ -69,7 +162,7 @@ export function ArchiveItem({ item }: ArchiveItemProps) {
           loop
           playsInline
           preload="metadata"
-          poster={item.posterSrc}
+          poster={generatedPoster}
         >
           <source src={item.src} type={sourceType} />
         </video>

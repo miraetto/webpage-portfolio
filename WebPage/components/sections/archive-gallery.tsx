@@ -13,6 +13,7 @@ const ALL_FILTER = FILTERS[0];
 
 export function ArchiveGallery({ items }: ArchiveGalleryProps) {
   const [activeFilter, setActiveFilter] = useState<(typeof FILTERS)[number]>(ALL_FILTER);
+  const [pinnedSlug, setPinnedSlug] = useState<string | null>(null);
   const deferredFilter = useDeferredValue(activeFilter);
   const gridRef = useRef<HTMLDivElement>(null);
 
@@ -27,6 +28,7 @@ export function ArchiveGallery({ items }: ArchiveGalleryProps) {
   const handleFilterChange = (filter: (typeof FILTERS)[number]) => {
     startTransition(() => {
       setActiveFilter(filter);
+      setPinnedSlug(null);
     });
 
     requestAnimationFrame(() => {
@@ -76,7 +78,16 @@ export function ArchiveGallery({ items }: ArchiveGalleryProps) {
 
       <div ref={gridRef} className="mt-12 grid grid-cols-1 items-start gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {filteredItems.map((item) => (
-          <ArchiveItem key={item.slug} item={item} />
+          <ArchiveItem
+            key={item.slug}
+            item={item}
+            isPinned={item.slug === pinnedSlug}
+            onTogglePin={() =>
+              setPinnedSlug((currentPinnedSlug) =>
+                currentPinnedSlug === item.slug ? null : item.slug
+              )
+            }
+          />
         ))}
       </div>
     </>
