@@ -225,6 +225,24 @@ export const archiveEntries: ArchiveEntry[] = [
     aspectRatio: "portrait"
   },
   {
+    slug: "radiant-matte",
+    title: "웹 배너 디자인",
+    description: "Photoshop",
+    category: "웹 배너",
+    mediaType: "image",
+    src: "/images/radiant-matte.jpg",
+    aspectRatio: "square"
+  },
+  {
+    slug: "hyaluponic-set",
+    title: "웹 배너 디자인",
+    description: "Photoshop + Illustrator",
+    category: "웹 배너",
+    mediaType: "image",
+    src: "/images/hyaluponic-set.png",
+    aspectRatio: "landscape"
+  },
+  {
     slug: "magical-girl-transformation",
     title: "Blender 시퀀스",
     description: "Blender + After Effects",
@@ -313,10 +331,10 @@ export const pageContent = {
   contact: {
     sectionLabel: "Contact",
     sectionTitle: "함께 만들 이야기가 있다면",
-    description: "포트폴리오 문의는 아래 이메일로 연락해주세요.",
-    projectLinkLabel: "대표 프로젝트 링크 보기",
+    description: "광고·모션 디자인 작업 문의",
+    projectLinkLabel: "Game Side Project 보기",
     supportText:
-      "Graphic Design, Motion Design, Web Banner, SNS Creative 기반의 작업을 준비하고 있습니다."
+      "Advertising Design · Social Motion · Web Banner · Game Marketing Visuals"
   },
   notFound: {
     codeLabel: "404",

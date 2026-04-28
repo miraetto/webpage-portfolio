@@ -33,7 +33,7 @@ export type ArchiveEntry = {
   mediaType: "image" | "video";
   src: string;
   posterSrc?: string;
-  aspectRatio?: "landscape" | "portrait";
+  aspectRatio?: "landscape" | "portrait" | "square";
 };
 
 export type SiteData = {

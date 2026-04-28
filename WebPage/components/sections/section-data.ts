@@ -25,7 +25,11 @@ export const socialMotionItems = getArchiveItems([
   "flc-instastory"
 ]);
 
-export const webBannerItems = getArchiveItems(["untitled-2"]);
+export const webBannerItems = getArchiveItems([
+  "untitled-2",
+  "radiant-matte",
+  "hyaluponic-set"
+]);
 
 export const motionDesignArchiveItems = getArchiveItems([
   "mirae-showreel",

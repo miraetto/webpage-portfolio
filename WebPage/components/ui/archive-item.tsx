@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { ArchiveEntry } from "@/types";
 
@@ -12,7 +13,11 @@ type ArchiveItemProps = {
 export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
   const sourceType = item.src.endsWith(".mp4") ? "video/mp4" : undefined;
   const mediaAspect =
-    item.aspectRatio === "landscape" ? "aspect-video" : "aspect-[9/16]";
+    item.aspectRatio === "landscape"
+      ? "aspect-video"
+      : item.aspectRatio === "square"
+        ? "aspect-square"
+        : "aspect-[9/16]";
   const videoRef = useRef<HTMLVideoElement>(null);
   const [canHoverPreview, setCanHoverPreview] = useState(false);
   const [generatedPoster, setGeneratedPoster] = useState<string | undefined>(
@@ -137,42 +142,58 @@ export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
 
   return (
     <article className="group surface-card editorial-shell overflow-hidden transition-transform duration-300 hover:-translate-y-1">
-      <div
-        className={["media-stage relative cursor-pointer bg-black", mediaAspect].join(" ")}
-        onMouseEnter={startPreview}
-        onMouseLeave={stopPreview}
-        onFocus={startPreview}
-        onBlur={stopPreview}
-        onClick={togglePinnedPlayback}
-        onKeyDown={(event) => {
-          if (event.key !== "Enter" && event.key !== " ") {
-            return;
-          }
+      {item.mediaType === "image" ? (
+        <div className={["media-stage relative bg-black", mediaAspect].join(" ")}>
+          <Image
+            src={item.src}
+            alt={item.title}
+            fill
+            className="h-full w-full object-contain"
+            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          />
 
-          event.preventDefault();
-          togglePinnedPlayback();
-        }}
-        tabIndex={0}
-        role="button"
-        aria-pressed={isPinned}
-      >
-        <video
-          ref={videoRef}
-          className="h-full w-full object-cover"
-          controls={!canHoverPreview}
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={generatedPoster}
-        >
-          <source src={item.src} type={sourceType} />
-        </video>
-
-        <div className="category-chip pointer-events-none absolute left-4 top-4 rounded-lg px-3 py-1 text-xs tracking-[0.12em] text-white">
-          {item.category}
+          <div className="category-chip pointer-events-none absolute left-4 top-4 rounded-lg px-3 py-1 text-xs tracking-[0.12em] text-white">
+            {item.category}
+          </div>
         </div>
-      </div>
+      ) : (
+        <div
+          className={["media-stage relative cursor-pointer bg-black", mediaAspect].join(" ")}
+          onMouseEnter={startPreview}
+          onMouseLeave={stopPreview}
+          onFocus={startPreview}
+          onBlur={stopPreview}
+          onClick={togglePinnedPlayback}
+          onKeyDown={(event) => {
+            if (event.key !== "Enter" && event.key !== " ") {
+              return;
+            }
+
+            event.preventDefault();
+            togglePinnedPlayback();
+          }}
+          tabIndex={0}
+          role="button"
+          aria-pressed={isPinned}
+        >
+          <video
+            ref={videoRef}
+            className="h-full w-full object-cover"
+            controls={!canHoverPreview}
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={generatedPoster}
+          >
+            <source src={item.src} type={sourceType} />
+          </video>
+
+          <div className="category-chip pointer-events-none absolute left-4 top-4 rounded-lg px-3 py-1 text-xs tracking-[0.12em] text-white">
+            {item.category}
+          </div>
+        </div>
+      )}
       <div className="p-4">
         <h3 className="text-sm font-medium leading-6 md:text-[0.95rem]">
           {item.title}
