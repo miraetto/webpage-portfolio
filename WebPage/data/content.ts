@@ -5,7 +5,7 @@ export const site: SiteData = {
   nameEn: "Mirae Shin",
   headline: "게임의 첫인상을 설계하는 광고·모션 디자이너",
   intro:
-    "Photoshop, Illustrator, After Effects를 기반으로 웹 배너, SNS 콘텐츠, 프로모션 키비주얼, 모션 광고를 제작합니다. 게임 제작 경험을 바탕으로 플레이 화면과 유저 맥락을 이해하고, 이를 광고 비주얼로 전환합니다.",
+    "Photoshop, Illustrator, After Effects를 기반으로 웹 배너, SNS 콘텐츠, 프로모션 키비주얼, 모션 광고를 제작합니다. 게임을 직접 만들며 익힌 화면감과 연출 감각을 바탕으로, 게임의 매력이 잘 보이는 광고 비주얼을 만듭니다.",
   about:
     "게임 마케팅과 광고 크리에이티브에 필요한 그래픽, 모션, 배너 제작 역량을 중심으로 작업합니다.",
   highlight:

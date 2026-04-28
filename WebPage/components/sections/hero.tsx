@@ -4,6 +4,12 @@ import { pageContent } from "@/data/content";
 import { site } from "@/data/site";
 import { Container } from "@/components/ui/container";
 
+const heroHeadlineLines = [
+  "게임의 첫인상을",
+  "설계하는",
+  "광고·모션 디자이너"
+];
+
 export function Hero() {
   return (
     <section className="section-anchor relative pt-6">
@@ -44,10 +50,17 @@ export function Hero() {
               <p className="eyebrow">
                 {site.name} · {site.nameEn}
               </p>
-              <h1 className="headline-display mt-5 max-w-4xl text-4xl md:text-6xl">
-                {site.headline}
+              <h1
+                className="headline-display mt-5 max-w-4xl text-[32px] leading-[40px] tracking-[-0.03em] md:text-[56px] md:leading-[63px]"
+                aria-label={site.headline}
+              >
+                {heroHeadlineLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-7 text-muted md:text-lg md:leading-8">
+              <p className="mt-6 max-w-2xl text-base leading-[24px] tracking-[-0.03em] text-muted md:text-lg md:leading-[28px]">
                 {site.intro}
               </p>
 
