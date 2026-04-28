@@ -16,6 +16,7 @@ export const gameProjects = projects.filter(
 
 export const socialMotionItems = getArchiveItems([
   "scs-instastory-page3",
+  "cpf-instastory-01",
   "gss-day1-page1",
   "instastory-page2",
   "ggl-day2-page3",

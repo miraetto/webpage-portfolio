@@ -70,12 +70,12 @@ export const projects: Project[] = [
       },
       {
         label: "Deliverables",
-        value: "9:16 SNS 모션 영상, 제품 중심 비주얼, 텍스트 및 전환 모션"
+        value: "9:16 SNS 모션 영상, 제품 중심 비주얼, 텍스트 모션"
       },
       {
         label: "Design Focus",
         value:
-          "짧은 노출 시간 안에서 제품 인상, 메시지 가독성, 화면 전환 리듬이 명확하게 보이도록 구성"
+          "짧은 노출 시간 안에서 제품의 매력적인 이미지, 메시지 가독성이 명확하게 보이도록 구성"
       },
       {
         label: "Tools",
@@ -89,26 +89,30 @@ export const projects: Project[] = [
   },
   {
     slug: "day6-fangame",
-    title: "2D게임 프로토타입 및 티저",
+    title: "1인 인디게임 개발과 티저 영상 제작",
     description:
       "밴드 DAY6를 모티브로 한 2D 픽셀 플랫포머 팬게임을 제작했습니다. 게임 제작뿐 아니라 티저 영상도 직접 제작해, 기획부터 홍보까지 하나의 톤으로 연결했습니다.",
     details: [
       {
         label: "Brief",
-        value: "2D 게임 프로토타입과 공개용 티저 영상 제작"
+        value: "2D플랫포머형식의 DAY6 팬게임을 제작하고 홍보용 티저 영상을 제작하였습니다."
       },
       {
         label: "Role",
-        value: "게임 화면 구성, 프로토타입 제작, 티저 영상 편집"
+        value: "게임 기획과 제작, 티저 영상 제작"
       },
       {
         label: "Deliverables",
-        value: "2D 게임 프로토타입, 티저 영상, itch.io 공개 페이지"
+        value: "itch.io 게임 공개 페이지, 홍보 티저 영상, SNS 홍보 게시물"
+      },
+      {
+        label: "Result",
+        value: "일일 방문자 1,000명 달성"
       },
       {
         label: "Design Focus",
         value:
-          "게임 플레이 화면과 팬 프로젝트의 분위기를 티저 영상에서 이해하기 쉽게 전달"
+          "팬 게임 제작 프로젝트의 홍보와 게임의 전반적인 분위기를 티저영상으로 전달"
       },
       {
         label: "Tools",
@@ -213,6 +217,15 @@ export const archiveEntries: ArchiveEntry[] = [
     category: "소셜 모션",
     mediaType: "video",
     src: "/videos/scs-instastory-page3.mp4",
+    aspectRatio: "portrait"
+  },
+  {
+    slug: "cpf-instastory-01",
+    title: "인스타그램 스토리 디자인 / 모션그래픽 / 제품 촬영·보정",
+    description: "Illustrator + Photoshop + After Effects",
+    category: "소셜 모션",
+    mediaType: "video",
+    src: "/videos/cpf-instastory-01.mp4",
     aspectRatio: "portrait"
   },
   {
