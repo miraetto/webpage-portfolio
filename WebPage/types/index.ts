@@ -13,6 +13,10 @@ export type Project = {
   slug: string;
   title: string;
   description: string;
+  details?: Array<{
+    label: string;
+    value: string;
+  }>;
   tools: string[];
   href?: string;
   mediaType: "image" | "video";

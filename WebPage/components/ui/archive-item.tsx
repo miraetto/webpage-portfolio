@@ -11,6 +11,8 @@ type ArchiveItemProps = {
 
 export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
   const sourceType = item.src.endsWith(".mp4") ? "video/mp4" : undefined;
+  const mediaAspect =
+    item.aspectRatio === "landscape" ? "aspect-video" : "aspect-[9/16]";
   const videoRef = useRef<HTMLVideoElement>(null);
   const [canHoverPreview, setCanHoverPreview] = useState(false);
   const [generatedPoster, setGeneratedPoster] = useState<string | undefined>(
@@ -136,7 +138,7 @@ export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
   return (
     <article className="group surface-card editorial-shell overflow-hidden transition-transform duration-300 hover:-translate-y-1">
       <div
-        className="media-stage relative aspect-[9/16] cursor-pointer bg-black"
+        className={["media-stage relative cursor-pointer bg-black", mediaAspect].join(" ")}
         onMouseEnter={startPreview}
         onMouseLeave={stopPreview}
         onFocus={startPreview}

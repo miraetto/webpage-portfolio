@@ -34,9 +34,14 @@ export function Contact() {
               ) : null}
             </div>
 
-            <p className="max-w-sm text-sm leading-6 text-muted">
-              {pageContent.contact.supportText}
-            </p>
+            <div className="max-w-sm text-left md:text-right">
+              <p className="headline-display text-2xl leading-none md:text-3xl">
+                {site.name}
+              </p>
+              <p className="mt-3 text-sm leading-6 text-muted">
+                {pageContent.contact.supportText}
+              </p>
+            </div>
           </div>
         </div>
       </Container>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { pageContent } from "@/data/content";
 import { site } from "@/data/site";
@@ -37,9 +38,9 @@ export function Hero() {
 
           <div
             id="hero"
-            className="section-anchor grid gap-12 px-5 py-14 md:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] md:px-8 md:py-20"
+            className="section-anchor grid gap-12 px-5 py-14 md:grid-cols-[minmax(320px,0.92fr)_minmax(0,1.08fr)] md:px-8 md:py-20"
           >
-            <div>
+            <div className="md:order-2">
               <p className="eyebrow">
                 {site.name} · {site.nameEn}
               </p>
@@ -60,7 +61,7 @@ export function Hero() {
 
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
-                  href="#projects"
+                  href="#advertising-works"
                   className="action-primary px-5 py-3 text-sm font-medium text-white transition-transform duration-300 hover:-translate-y-0.5"
                 >
                   {pageContent.hero.primaryActionLabel}
@@ -74,19 +75,16 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="surface-card editorial-shell hero-reel-shell h-fit">
-              <span className="gel-badge floating-gel-badge">Show Reel</span>
-              <div className="hero-reel-frame media-stage aspect-video">
-                <video
-                  className="h-full w-full object-cover"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                >
-                  <source src="/videos/mirae-showreel.mp4" type="video/mp4" />
-                </video>
+            <div className="surface-card editorial-shell hero-reel-shell h-fit md:order-1">
+              <div className="hero-reel-frame media-stage mx-auto aspect-[4/5] w-full max-w-[420px] md:max-w-none">
+                <Image
+                  src="/images/m8s-squad.jpg"
+                  alt="M8s Squad"
+                  fill
+                  className="h-full w-full object-contain"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 38vw"
+                />
               </div>
             </div>
           </div>

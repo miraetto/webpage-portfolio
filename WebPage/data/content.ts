@@ -3,80 +3,136 @@ import type { ArchiveEntry, Capability, Project, SiteData } from "@/types";
 export const site: SiteData = {
   name: "신미래",
   nameEn: "Mirae Shin",
-  headline: "감각을 시스템으로 바꾸는 크리에이터",
+  headline: "게임의 첫인상을 설계하는 광고·모션 디자이너",
   intro:
-    "그래픽 디자인과 모션을 기반으로, AI·3D·실시간 엔진을 연결해 더 효율적이고 완성도 높은 제작 흐름을 만듭니다.",
+    "Photoshop, Illustrator, After Effects를 기반으로 웹 배너, SNS 콘텐츠, 프로모션 키비주얼, 모션 광고를 제작합니다. 게임 제작 경험을 바탕으로 플레이 화면과 유저 맥락을 이해하고, 이를 광고 비주얼로 전환합니다.",
   about:
-    "그래픽과 모션 경험을 바탕으로, AI와 3D, 실시간 엔진을 연결한 작업 흐름을 설계합니다.",
+    "게임 마케팅과 광고 크리에이티브에 필요한 그래픽, 모션, 배너 제작 역량을 중심으로 작업합니다.",
   highlight:
-    "그래픽 및 영상 디자인 경험을 바탕으로, AI와 3D, 실시간 엔진을 제작 과정에 자연스럽게 연결해왔습니다. Adobe 기반의 시각 콘텐츠 제작 경험 위에 Unity, Godot, Blender 등으로 작업 영역을 넓혀왔으며, 반복적인 작업을 줄이고 더 나은 결과를 만드는 흐름을 설계하는 일을 좋아합니다.",
+    "Photoshop, Illustrator, After Effects 기반의 시각 콘텐츠 제작 경험을 중심으로 웹 배너, SNS 콘텐츠, 프로모션 키비주얼, 모션 광고를 제작합니다. Unity, Godot, Blender 경험은 게임 화면과 제작 맥락을 이해하는 보조 역량으로 활용합니다.",
   email: "miraetto@gmail.com",
   itchUrl: "https://wouldyoubemyday.itch.io/galaxy-is-an-excuse",
   keywords: [
     "Graphic Design",
-    "Motion",
-    "AI Workflow",
-    "3D",
-    "Unity",
-    "Godot"
+    "Motion Design",
+    "Web Banner",
+    "SNS Creative",
+    "Game Marketing",
+    "Key Visual"
   ],
   navItems: [
-    { href: "#about", label: "소개" },
-    { href: "#capabilities", label: "역량" },
-    { href: "#projects", label: "프로젝트" },
-    { href: "#archive", label: "아카이브" },
-    { href: "#contact", label: "연락" }
+    { href: "#advertising-works", label: "Advertising Works" },
+    { href: "#social-motion", label: "Social Motion" },
+    { href: "#web-banner", label: "Banners" },
+    { href: "#game-marketing", label: "Spec Campaign" },
+    { href: "#motion-design-archive", label: "Archive" },
+    { href: "#contact", label: "Contact" }
   ]
 };
 
 export const capabilities: Capability[] = [
   {
-    title: "Visual",
-    description: "브랜드와 화면의 첫 인상을 세밀하게 설계합니다.",
+    title: "Graphic",
+    description: "웹 배너, SNS 콘텐츠, 프로모션 키비주얼을 목적에 맞게 구성합니다.",
     tools: ["Photoshop", "Illustrator", "ComfyUI"]
   },
   {
     title: "Motion",
-    description: "짧은 시간 안에서도 메시지가 선명하게 전달되도록 리듬을 만듭니다.",
+    description: "광고 소재의 메시지와 리듬이 짧은 시간 안에 전달되도록 편집합니다.",
     tools: ["Premiere Pro", "After Effects"]
   },
   {
-    title: "Realtime",
-    description: "실시간 엔진으로 경험을 더 입체적이고 상호작용적으로 확장합니다.",
+    title: "Game Context",
+    description: "게임 화면, 플레이 흐름, 유저 맥락을 고려해 광고 비주얼로 전환합니다.",
     tools: ["Unity", "Godot"]
   },
   {
-    title: "3D / Workflow",
-    description: "3D와 AI를 제작 파이프라인에 연결해 반복을 줄이고 완성도를 높입니다.",
-    tools: ["Blender", "AI-assisted production"]
+    title: "Additional Skills",
+    description: "필요한 경우 3D, 이미지 편집, 엔진 기반 제작 경험을 보조 역량으로 활용합니다.",
+    tools: ["Blender", "ComfyUI", "Engine basics"]
   }
 ];
 
 export const projects: Project[] = [
   {
+    slug: "beauty-instastory",
+    title: "뷰티 브랜드 모션그래픽 콘텐츠",
+    description:
+      "인스타그램 스토리 포맷에 맞춘 뷰티 브랜드 모션그래픽 콘텐츠를 제작했습니다.",
+    details: [
+      {
+        label: "Brief",
+        value: "인스타그램 스토리 포맷에 맞춘 뷰티 브랜드 모션 광고 콘텐츠 제작"
+      },
+      {
+        label: "Role",
+        value: "화면 구성, 이미지 편집, 모션그래픽 제작"
+      },
+      {
+        label: "Deliverables",
+        value: "9:16 SNS 모션 영상, 제품 중심 비주얼, 텍스트 및 전환 모션"
+      },
+      {
+        label: "Design Focus",
+        value:
+          "짧은 노출 시간 안에서 제품 인상, 메시지 가독성, 화면 전환 리듬이 명확하게 보이도록 구성"
+      },
+      {
+        label: "Tools",
+        value: "Photoshop, Illustrator, After Effects"
+      }
+    ],
+    tools: ["Photoshop", "Illustrator", "After Effects"],
+    mediaType: "video",
+    mediaSrc: "/videos/scs-instastory-page3.mp4",
+    aspectRatio: "portrait"
+  },
+  {
     slug: "day6-fangame",
     title: "2D게임 프로토타입 및 티저",
     description:
       "밴드 DAY6를 모티브로 한 2D 픽셀 플랫포머 팬게임을 제작했습니다. 게임 제작뿐 아니라 티저 영상도 직접 제작해, 기획부터 홍보까지 하나의 톤으로 연결했습니다.",
-    tools: ["Godot", "SORA", "Photoshop", "After Effects"],
+    details: [
+      {
+        label: "Brief",
+        value: "2D 게임 프로토타입과 공개용 티저 영상 제작"
+      },
+      {
+        label: "Role",
+        value: "게임 화면 구성, 프로토타입 제작, 티저 영상 편집"
+      },
+      {
+        label: "Deliverables",
+        value: "2D 게임 프로토타입, 티저 영상, itch.io 공개 페이지"
+      },
+      {
+        label: "Design Focus",
+        value:
+          "게임 플레이 화면과 팬 프로젝트의 분위기를 티저 영상에서 이해하기 쉽게 전달"
+      },
+      {
+        label: "Tools",
+        value: "Godot, Sora, Photoshop, After Effects"
+      }
+    ],
+    tools: ["Godot", "Sora", "Photoshop", "After Effects"],
     href: "https://wouldyoubemyday.itch.io/galaxy-is-an-excuse",
     mediaType: "video",
     mediaSrc: "/videos/day6-teaser.mp4",
     aspectRatio: "landscape"
-  },
-  {
-    slug: "beauty-instastory",
-    title: "뷰티 브랜드 모션그래픽 컨텐츠",
-    description:
-      "인스타스토리 포맷에 맞춘 짧은 모션그래픽 콘텐츠를 제작했습니다. 제한된 시간 안에서 제품의 인상과 메시지가 분명하게 전달되도록 화면 구성과 리듬을 설계했습니다.",
-    tools: ["Photoshop", "After Effects", "ChatGPT"],
-    mediaType: "video",
-    mediaSrc: "/videos/scs-instastory-page3.mp4",
-    aspectRatio: "portrait"
   }
 ];
 
 export const archiveEntries: ArchiveEntry[] = [
+  {
+    slug: "mirae-showreel",
+    title: "Show Reel",
+    description: "Motion / Design Reel",
+    category: "쇼릴",
+    mediaType: "video",
+    src: "/videos/mirae-showreel.mp4",
+    aspectRatio: "landscape"
+  },
   {
     slug: "day6-teaser",
     title: "Game Teaser",
@@ -89,7 +145,7 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "bf-instastory-1",
-    title: "인스타스토리 디자인 / 모션그래픽",
+    title: "인스타그램 스토리 디자인 / 모션그래픽",
     description: "Illustrator + After Effects",
     category: "브랜드 모션",
     mediaType: "video",
@@ -98,7 +154,7 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "cmf-instastory",
-    title: "인스타스토리 디자인 / 인포그래픽 / 제품 촬영·보정",
+    title: "인스타그램 스토리 디자인 / 인포그래픽 / 제품 촬영·보정",
     description: "Photoshop + After Effects",
     category: "브랜드 모션",
     mediaType: "video",
@@ -107,7 +163,7 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "dhl-page1",
-    title: "인스타스토리 디자인 / 텍스트이펙트 / 모델 촬영·보정",
+    title: "인스타그램 스토리 디자인 / 텍스트 이펙트 / 모델 촬영·보정",
     description: "Illustrator + Photoshop + After Effects",
     category: "브랜드 모션",
     mediaType: "video",
@@ -116,7 +172,7 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "flc-instastory",
-    title: "인스타스토리 디자인 / 텍스트이펙트 / 제품 촬영·보정",
+    title: "인스타그램 스토리 디자인 / 텍스트 이펙트 / 제품 촬영·보정",
     description: "Photoshop + After Effects",
     category: "브랜드 모션",
     mediaType: "video",
@@ -125,7 +181,7 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "ggl-day2-page3",
-    title: "인스타스토리 디자인 / 모션그래픽 / 모델 촬영·보정",
+    title: "인스타그램 스토리 디자인 / 모션그래픽 / 모델 촬영·보정",
     description: "Illustrator + Photoshop + After Effects",
     category: "소셜 모션",
     mediaType: "video",
@@ -134,7 +190,7 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "gss-day1-page1",
-    title: "인스타스토리 디자인 / 모션그래픽 / 제품 촬영·보정",
+    title: "인스타그램 스토리 디자인 / 모션그래픽 / 제품 촬영·보정",
     description: "Illustrator + Photoshop + After Effects",
     category: "소셜 모션",
     mediaType: "video",
@@ -152,7 +208,7 @@ export const archiveEntries: ArchiveEntry[] = [
   },
   {
     slug: "scs-instastory-page3",
-    title: "인스타스토리 디자인 / AI 이미지 편집 / 모션그래픽 / 제품 촬영·보정",
+    title: "인스타그램 스토리 디자인 / 이미지 편집 / 모션그래픽 / 제품 촬영·보정",
     description: "Illustrator + Photoshop + After Effects",
     category: "소셜 모션",
     mediaType: "video",
@@ -203,15 +259,15 @@ export const pageContent = {
     secondaryActionLabel: "연락하기",
     panelLabel: "Approach",
     panelTitle:
-      "시각적 감각을 구조화하고, 작업 시스템으로 연결해 결과물의 밀도를 높입니다.",
+      "게임 마케팅 소재의 목적에 맞춰 그래픽과 모션을 구성합니다.",
     panelBullets: [
-      "디자인과 모션 감각을 바탕으로 메시지를 정리합니다.",
-      "AI와 실시간 엔진을 활용해 제작 흐름을 확장합니다."
+      "웹 배너, SNS 콘텐츠, 키비주얼, 모션 광고를 제작합니다.",
+      "게임 화면과 유저 맥락을 이해하고 광고 비주얼로 정리합니다."
     ]
   },
   about: {
     sectionLabel: "About",
-    sectionTitle: "그래픽에서 실시간까지, 하나의 흐름",
+    sectionTitle: "게임 마케팅을 위한 그래픽과 모션",
     imageAlt: "신미래 포트폴리오 소개 이미지"
   },
   capabilities: {
@@ -223,6 +279,33 @@ export const pageContent = {
     sectionTitle: "Projects",
     viewProjectLabel: "프로젝트 보기"
   },
+  advertisingWorks: {
+    sectionLabel: "Selected",
+    sectionTitle: "Selected Advertising Works"
+  },
+  socialMotion: {
+    sectionLabel: "Social",
+    sectionTitle: "Social Motion"
+  },
+  webBanner: {
+    sectionLabel: "Banner",
+    sectionTitle: "Web Banner / DA Banner"
+  },
+  gameMarketing: {
+    sectionLabel: "Spec",
+    sectionTitle: "Game Marketing Spec Campaign",
+    placeholderTitle: "게임 마케팅 스펙 캠페인 준비 중",
+    placeholderDescription:
+      "게임 IP를 가정한 광고 캠페인, 키비주얼, 숏폼 모션 구성을 정리할 예정입니다."
+  },
+  motionDesignArchive: {
+    sectionLabel: "Archive",
+    sectionTitle: "Motion / Design Archive"
+  },
+  gameSideProject: {
+    sectionLabel: "Side Project",
+    sectionTitle: "Game Side Project"
+  },
   archive: {
     sectionLabel: "Archive",
     sectionTitle: "Video Archive"
@@ -230,10 +313,10 @@ export const pageContent = {
   contact: {
     sectionLabel: "Contact",
     sectionTitle: "함께 만들 이야기가 있다면",
-    description: "협업, 프로젝트, 포트폴리오 문의는 아래 이메일로 연락해주세요.",
+    description: "포트폴리오 문의는 아래 이메일로 연락해주세요.",
     projectLinkLabel: "대표 프로젝트 링크 보기",
     supportText:
-      "Graphic Design, Motion, AI Workflow, 3D, Realtime Engine 기반의 협업을 환영합니다."
+      "Graphic Design, Motion Design, Web Banner, SNS Creative 기반의 작업을 준비하고 있습니다."
   },
   notFound: {
     codeLabel: "404",
@@ -245,12 +328,12 @@ export const pageContent = {
 } as const;
 
 export const metadataContent = {
-  defaultTitle: "신미래 | 감각을 시스템으로 바꾸는 크리에이터",
+  defaultTitle: "신미래 | 게임 광고·모션 디자인 포트폴리오",
   titleTemplate: "%s | 신미래 포트폴리오",
   description:
-    "그래픽 디자인, 모션, AI, 3D, Unity, Godot 경험을 바탕으로 감각을 제작 시스템으로 연결하는 신미래의 포트폴리오.",
+    "웹 배너, SNS 콘텐츠, 프로모션 키비주얼, 모션 광고를 중심으로 구성한 신미래의 게임 마케팅 디자인 포트폴리오.",
   openGraphDescription:
-    "그래픽 디자인, 모션, AI, 3D, Unity, Godot 경험을 연결한 개인 포트폴리오.",
+    "게임 마케팅과 광고 크리에이티브를 위한 그래픽·모션 디자인 포트폴리오.",
   siteName: "신미래 포트폴리오",
   openGraphImageAlt: "신미래 포트폴리오 대표 이미지"
 } as const;
@@ -258,5 +341,5 @@ export const metadataContent = {
 export const manifestContent = {
   name: "신미래 포트폴리오",
   shortName: "Mirae",
-  description: "감각을 시스템으로 바꾸는 크리에이터 신미래의 포트폴리오"
+  description: "게임 광고·모션 디자이너 신미래의 포트폴리오"
 } as const;

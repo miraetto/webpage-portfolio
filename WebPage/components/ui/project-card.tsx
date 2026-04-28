@@ -11,6 +11,7 @@ type ProjectCardProps = {
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const reverseLayout = index % 2 === 1;
   const isPrimaryProject = index === 0;
+  const hasStructuredDetails = Boolean(project.details?.length);
   const mediaAspect =
     project.aspectRatio === "portrait"
       ? "mx-auto aspect-[9/16] w-full max-w-[360px]"
@@ -62,19 +63,32 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             <h3 className="mt-3 text-2xl font-semibold tracking-[-0.03em] md:text-3xl">
               {project.title}
             </h3>
-            <p className="mt-4 text-sm leading-6 text-muted md:text-base md:leading-7">
-              {project.description}
-            </p>
+            {project.details ? (
+              <dl className="mt-5 space-y-3 text-sm leading-6 md:text-base md:leading-7">
+                {project.details.map((detail) => (
+                  <div key={detail.label}>
+                    <dt className="font-semibold text-ink">{detail.label}</dt>
+                    <dd className="mt-0.5 text-muted">{detail.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            ) : (
+              <p className="mt-4 text-sm leading-6 text-muted md:text-base md:leading-7">
+                {project.description}
+              </p>
+            )}
           </div>
 
           <div className="mt-8">
-            <ul className="flex flex-wrap gap-2">
-              {project.tools.map((tool) => (
-                <li key={tool} className="tag-pill">
-                  {tool}
-                </li>
-              ))}
-            </ul>
+            {!hasStructuredDetails ? (
+              <ul className="flex flex-wrap gap-2">
+                {project.tools.map((tool) => (
+                  <li key={tool} className="tag-pill">
+                    {tool}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
 
             {project.href ? (
               <Link
@@ -82,7 +96,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 target="_blank"
                 rel="noreferrer"
                 className={[
-                  "mt-6 inline-flex items-center px-4 py-2.5 text-sm font-medium transition-all",
+                  "inline-flex items-center px-4 py-2.5 text-sm font-medium transition-all",
+                  hasStructuredDetails ? "" : "mt-6",
                   isPrimaryProject
                     ? "action-primary text-white hover:-translate-y-0.5"
                     : "text-accent hover:opacity-70"
