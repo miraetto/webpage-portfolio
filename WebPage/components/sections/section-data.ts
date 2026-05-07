@@ -35,6 +35,5 @@ export const webBannerItems = getArchiveItems([
 export const motionDesignArchiveItems = getArchiveItems([
   "mirae-showreel",
   "unity-vfx-01",
-  "blender-camera-motion",
-  "magical-girl-transformation"
+  "blender-camera-motion"
 ]);
