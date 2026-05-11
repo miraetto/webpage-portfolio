@@ -5,7 +5,7 @@ export const site: SiteData = {
   nameEn: "Mirae Shin",
   headline: "Game Web/UI Designer",
   intro:
-    "폭넓은 디자인 경험을 바탕으로, 사람의 눈길을 끌고 행동으로 이어지는 디자인을 고민합니다.\n직접 게임을 개발하며 익힌 제작 흐름과 플레이어의 관점도 화면 설계에 녹여냅니다.",
+    "광고 그래픽과 게임 화면 사이에서, 플레이어가 마주하는 장면을 설계합니다.\n직접 게임을 제작한 경험을 바탕으로, 보기 좋은 화면을 넘어 플레이하고 싶어지는 비주얼을 고민합니다.",
   email: "miraetto@gmail.com",
   itchUrl: "https://wouldyoubemyday.itch.io/galaxy-is-an-excuse",
   keywords: [
@@ -335,7 +335,7 @@ export const pageContent = {
   socialMotion: {
     sectionLabel: "Social",
     sectionTitle: "Social Motion",
-    description: "모바일 화면에서 빠르게 시선을 끌고 메시지를 전달하는 짧은 모션 콘텐츠"
+    description: "모바일 화면에서 제품의 분위기가 읽히도록 구성한 모션그래픽 작업"
   },
   webBanner: {
     sectionLabel: "Banner",
@@ -345,7 +345,7 @@ export const pageContent = {
   gameMarketing: {
     sectionLabel: "Spec",
     sectionTitle: "Game Marketing Spec Campaign",
-    description: "직접 제작한 1인게임과 홍보 비주얼을 통해 게임의 분위기와 플레이 경험을 전달한 프로젝트",
+    description: "2D 플랫폼 게임과 홍보용 티저 영상을 제작해 본 프로젝트",
     placeholderTitle: "게임 마케팅 스펙 캠페인 준비 중",
     placeholderDescription:
       "게임 IP를 가정한 광고 캠페인, 키비주얼, 숏폼 모션 구성을 정리할 예정입니다."
