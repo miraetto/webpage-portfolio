@@ -203,6 +203,11 @@ export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
             {item.description}
           </p>
         ) : null}
+        {item.note ? (
+          <p className="mt-1 text-[0.62rem] font-light leading-4 text-muted/55">
+            {item.note}
+          </p>
+        ) : null}
         <p className="mt-3 border-t border-gold/10 pt-3 text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-gold/70">
           Contribution · {item.contribution ?? "100%"}
         </p>

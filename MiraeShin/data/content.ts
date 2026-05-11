@@ -239,6 +239,16 @@ export const archiveEntries: ArchiveEntry[] = [
     aspectRatio: "portrait"
   },
   {
+    slug: "sneaker-commerce-hero-ui",
+    title: "Sneaker Commerce Hero UI",
+    description: "Photoshop",
+    category: "Web UI",
+    mediaType: "image",
+    src: "/images/sneaker-commerce-hero-ui.png",
+    aspectRatio: "landscape",
+    note: "Unofficial concept design for portfolio use only."
+  },
+  {
     slug: "untitled-2",
     title: "웹 배너 디자인",
     description: "Illustrator + Photoshop",
@@ -338,7 +348,7 @@ export const pageContent = {
   },
   webBanner: {
     sectionLabel: "Banner",
-    sectionTitle: "Web Banner / DA Banner",
+    sectionTitle: "Web / Digital Design",
     description: "제한된 영역 안에서 브랜드 이미지, 핵심 문구, CTA가 빠르게 읽히도록 구성한 배너 작업"
   },
   gameMarketing: {

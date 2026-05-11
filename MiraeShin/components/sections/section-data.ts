@@ -27,9 +27,10 @@ export const socialMotionItems = getArchiveItems([
 ]);
 
 export const webBannerItems = getArchiveItems([
+  "sneaker-commerce-hero-ui",
+  "hyaluponic-set",
   "untitled-2",
-  "radiant-matte",
-  "hyaluponic-set"
+  "radiant-matte"
 ]);
 
 export const motionDesignArchiveItems = getArchiveItems([

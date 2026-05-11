@@ -12,9 +12,9 @@ export default function HomePage() {
     <main className="relative overflow-x-clip bg-obsidian text-ivory">
       <SiteHeader />
       <Hero />
+      <GameMarketingSpec />
       <SocialMotion />
       <WebBannerSection />
-      <GameMarketingSpec />
       <MotionDesignArchive />
       <SkillsAbout />
       <Contact />

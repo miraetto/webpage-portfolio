@@ -11,6 +11,7 @@ const CATEGORY_BY_SLUG: Record<string, ArchiveEntry["category"]> = {
   "gss-day1-page1": "소셜 모션",
   "instastory-page2": "소셜 모션",
   "scs-instastory-page3": "소셜 모션",
+  "sneaker-commerce-hero-ui": "Web UI",
   "untitled-2": "웹 배너",
   "radiant-matte": "웹 배너",
   "hyaluponic-set": "웹 배너",

@@ -38,6 +38,7 @@ export type ArchiveEntry = {
   posterSrc?: string;
   aspectRatio?: "landscape" | "portrait" | "square";
   contribution?: string;
+  note?: string;
 };
 
 export type SiteData = {
