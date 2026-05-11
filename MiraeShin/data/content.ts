@@ -93,15 +93,14 @@ export const projects: Project[] = [
   },
   {
     slug: "day6-fangame",
-    title: "1인 인디게임 개발과 티저 영상 제작",
-    titleEn: "Solo Indie Game Development & Teaser Video",
+    title: "인디게임 개발과 티저 영상 제작",
     type: "Game Side Project / Teaser Video / Game Marketing Visual",
     description:
       "밴드 DAY6를 모티브로 한 2D 픽셀 플랫포머 팬게임을 제작했습니다. 게임 제작뿐 아니라 티저 영상도 직접 제작해, 기획부터 홍보까지 하나의 톤으로 연결했습니다.",
     details: [
       {
         label: "Brief",
-        value: "2D 플랫포머 형식의 팬게임을 제작하고 홍보용 티저 영상을 제작"
+        value: "1인 인디게임(아이돌밴드 DAY6의 팬게임)을 제작하고 홍보용 티저 영상을 제작"
       },
       {
         label: "Role",
@@ -118,11 +117,11 @@ export const projects: Project[] = [
       {
         label: "Design Focus",
         value:
-          "게임의 분위기와 플레이 경험을 홍보용 티저 영상과 비주얼로 전달"
+          "DAY6의 캐릭터를 픽셀화한 게임의 비주얼과 우주 배경이라는 내용을 홍보용 티저 영상으로 전달"
       },
       {
         label: "Tools",
-        value: "Godot, Sora, Photoshop, After Effects"
+        value: "Godot, Photoshop, After Effects, Sora(영상 트랜지션)"
       }
     ],
     tools: ["Godot", "Sora", "Photoshop", "After Effects"],
@@ -345,7 +344,7 @@ export const pageContent = {
   gameMarketing: {
     sectionLabel: "Spec",
     sectionTitle: "Game Marketing Spec Campaign",
-    description: "2D 플랫폼 게임과 홍보용 티저 영상을 제작해 본 프로젝트",
+    description: "2D 플랫포머 게임과 홍보용 티저 등을 제작해 본 개인 프로젝트",
     placeholderTitle: "게임 마케팅 스펙 캠페인 준비 중",
     placeholderDescription:
       "게임 IP를 가정한 광고 캠페인, 키비주얼, 숏폼 모션 구성을 정리할 예정입니다."
