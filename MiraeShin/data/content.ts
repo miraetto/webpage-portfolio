@@ -40,8 +40,8 @@ export const capabilities: Capability[] = [
   },
   {
     title: "Motion / Video",
-    description: "짧은 모션 콘텐츠와 티저 영상에서 메시지와 리듬을 조정합니다.",
-    tools: ["After Effects", "Premiere Pro", "social motion", "text motion"]
+    description: "모션그래픽과 영상 컨텐츠를 제작합니다.",
+    tools: ["After Effects", "Premiere Pro", "motion graphic", "video editing"]
   },
   {
     title: "Game / Interactive",
@@ -51,7 +51,7 @@ export const capabilities: Capability[] = [
   {
     title: "AI / Retouching",
     description: "AI 이미지 워크플로우를 보조적으로 활용해 편집과 보정을 진행합니다.",
-    tools: ["AI image workflow", "image retouching", "visual direction", "editing and refinement"]
+    tools: ["ComfyUI", "AI image workflow", "image retouching", "editing and refinement"]
   }
 ];
 
