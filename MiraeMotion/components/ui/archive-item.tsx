@@ -12,12 +12,27 @@ type ArchiveItemProps = {
 
 export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
   const sourceType = item.src.endsWith(".mp4") ? "video/mp4" : undefined;
+  const usesPersistentControls = item.slug === "mirae-showreel";
   const mediaAspect =
     item.aspectRatio === "landscape"
       ? "aspect-video"
       : item.aspectRatio === "square"
         ? "aspect-square"
         : "aspect-[9/16]";
+  const recordClass = [
+    "group surface-card archive-record overflow-hidden transition-transform duration-300 hover:-translate-y-1",
+    usesPersistentControls ? "md:col-span-3" : ""
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const videoStageClass = [
+    "media-stage relative bg-black",
+    usesPersistentControls ? "" : "cursor-pointer",
+    mediaAspect
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const showCategoryChip = item.category !== "Short-form Motion Ads";
   const videoRef = useRef<HTMLVideoElement>(null);
   const [canHoverPreview, setCanHoverPreview] = useState(false);
   const [generatedPoster, setGeneratedPoster] = useState<string | undefined>(
@@ -93,7 +108,7 @@ export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
   }, [item.mediaType, item.posterSrc, item.src]);
 
   useEffect(() => {
-    if (!canHoverPreview || !videoRef.current) {
+    if (usesPersistentControls || !canHoverPreview || !videoRef.current) {
       return;
     }
 
@@ -108,10 +123,10 @@ export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
 
     video.pause();
     video.currentTime = 0;
-  }, [canHoverPreview, isPinned]);
+  }, [canHoverPreview, isPinned, usesPersistentControls]);
 
   const startPreview = () => {
-    if (!canHoverPreview || !videoRef.current || isPinned) {
+    if (usesPersistentControls || !canHoverPreview || !videoRef.current || isPinned) {
       return;
     }
 
@@ -123,7 +138,7 @@ export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
   };
 
   const stopPreview = () => {
-    if (!canHoverPreview || !videoRef.current || isPinned) {
+    if (usesPersistentControls || !canHoverPreview || !videoRef.current || isPinned) {
       return;
     }
 
@@ -133,7 +148,7 @@ export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
   };
 
   const togglePinnedPlayback = () => {
-    if (!canHoverPreview) {
+    if (usesPersistentControls || !canHoverPreview) {
       return;
     }
 
@@ -141,7 +156,7 @@ export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
   };
 
   return (
-    <article className="group surface-card archive-record overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+    <article className={recordClass}>
       {item.mediaType === "image" ? (
         <div className={["media-stage relative bg-black", mediaAspect].join(" ")}>
           <Image
@@ -152,34 +167,40 @@ export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
             sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
           />
 
-          <div className="category-chip pointer-events-none absolute left-4 top-4 px-3 py-1 text-xs tracking-[0.12em]">
-            {item.category}
-          </div>
+          {showCategoryChip ? (
+            <div className="category-chip pointer-events-none absolute left-4 top-4 px-3 py-1 text-xs tracking-[0.12em]">
+              {item.category}
+            </div>
+          ) : null}
         </div>
       ) : (
         <div
-          className={["media-stage relative cursor-pointer bg-black", mediaAspect].join(" ")}
-          onMouseEnter={startPreview}
-          onMouseLeave={stopPreview}
-          onFocus={startPreview}
-          onBlur={stopPreview}
-          onClick={togglePinnedPlayback}
-          onKeyDown={(event) => {
-            if (event.key !== "Enter" && event.key !== " ") {
-              return;
-            }
+          className={videoStageClass}
+          onMouseEnter={usesPersistentControls ? undefined : startPreview}
+          onMouseLeave={usesPersistentControls ? undefined : stopPreview}
+          onFocus={usesPersistentControls ? undefined : startPreview}
+          onBlur={usesPersistentControls ? undefined : stopPreview}
+          onClick={usesPersistentControls ? undefined : togglePinnedPlayback}
+          onKeyDown={
+            usesPersistentControls
+              ? undefined
+              : (event) => {
+                  if (event.key !== "Enter" && event.key !== " ") {
+                    return;
+                  }
 
-            event.preventDefault();
-            togglePinnedPlayback();
-          }}
-          tabIndex={0}
-          role="button"
-          aria-pressed={isPinned}
+                  event.preventDefault();
+                  togglePinnedPlayback();
+                }
+          }
+          tabIndex={usesPersistentControls ? undefined : 0}
+          role={usesPersistentControls ? undefined : "button"}
+          aria-pressed={usesPersistentControls ? undefined : isPinned}
         >
           <video
             ref={videoRef}
             className="h-full w-full object-cover"
-            controls={!canHoverPreview}
+            controls={usesPersistentControls || !canHoverPreview}
             muted
             loop
             playsInline
@@ -189,9 +210,11 @@ export function ArchiveItem({ item, isPinned, onTogglePin }: ArchiveItemProps) {
             <source src={item.src} type={sourceType} />
           </video>
 
-          <div className="category-chip pointer-events-none absolute left-4 top-4 px-3 py-1 text-xs tracking-[0.12em]">
-            {item.category}
-          </div>
+          {showCategoryChip ? (
+            <div className="category-chip pointer-events-none absolute left-4 top-4 px-3 py-1 text-xs tracking-[0.12em]">
+              {item.category}
+            </div>
+          ) : null}
         </div>
       )}
       <div className="p-4 md:p-5">

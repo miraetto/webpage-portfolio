@@ -25,7 +25,7 @@ export type Project = {
   mediaType: "image" | "video";
   mediaSrc: string;
   posterSrc?: string;
-  aspectRatio?: "landscape" | "portrait";
+  aspectRatio?: "landscape" | "portrait" | "square";
 };
 
 export type ArchiveEntry = {

@@ -6,16 +6,22 @@ const getArchiveItems = (slugs: string[]) =>
     .map((slug) => archiveEntries.find((item) => item.slug === slug))
     .filter((item) => item !== undefined);
 
+const getProjectItems = (slugs: string[]) =>
+  slugs
+    .map((slug) => projects.find((project) => project.slug === slug))
+    .filter((project) => project !== undefined);
+
 export const advertisingProjects = projects.filter(
-  (project) => project.slug === "beauty-instastory"
+  (project) =>
+    project.slug === "weasy-concept-film" || project.slug === "beauty-instastory"
 );
 
-export const gameProjects = projects.filter(
-  (project) => project.slug === "day6-fangame"
-);
+export const gameProjects = getProjectItems([
+  "babttori-web-service",
+  "day6-fangame"
+]);
 
 export const socialMotionItems = getArchiveItems([
-  "scs-instastory-page3",
   "cpf-instastory-01",
   "gss-day1-page1",
   "instastory-page2",
@@ -23,20 +29,18 @@ export const socialMotionItems = getArchiveItems([
   "bf-instastory-1",
   "cmf-instastory",
   "dhl-page1",
-  "flc-instastory"
+  "flc-instastory",
+  "untitled-2"
 ]);
 
 export const webBannerItems = getArchiveItems([
   "hyaluponic-set",
   "radiant-matte",
-  "untitled-2",
   "sneaker-commerce-hero-ui"
 ]);
 
 export const motionDesignArchiveItems = getArchiveItems([
   "mirae-showreel",
-  "magical-girl-transformation",
   "blender-camera-motion",
-  "unity-vfx-01",
-  "m8s-squad"
+  "unity-vfx-01"
 ]);

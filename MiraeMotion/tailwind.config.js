@@ -20,13 +20,8 @@ const config = {
         card: "var(--card)"
       },
       fontFamily: {
-        sans: [
-          "Pretendard Variable",
-          "SUIT Variable",
-          "Noto Sans KR",
-          "Apple SD Gothic Neo",
-          "sans-serif"
-        ]
+        sans: ["Noto Sans KR", "sans-serif"],
+        serif: ["Noto Sans KR", "sans-serif"]
       },
       boxShadow: {
         soft: "0 22px 70px rgba(0, 0, 0, 0.3)",

@@ -15,9 +15,9 @@ export default function HomePage() {
       <Hero />
       <AdvertisingWorks />
       <SocialMotion />
+      <MotionDesignArchive />
       <GameMarketingSpec />
       <WebBannerSection />
-      <MotionDesignArchive />
       <SkillsAbout />
       <Contact />
     </main>

@@ -36,10 +36,7 @@ body {
     linear-gradient(135deg, #0b0d10 0%, #101823 44%, #0b0d10 100%);
   color: var(--fg);
   font-family:
-    "Pretendard Variable",
-    "SUIT Variable",
     "Noto Sans KR",
-    "Apple SD Gothic Neo",
     sans-serif;
   text-rendering: optimizeLegibility;
 }
@@ -119,10 +116,9 @@ select {
   .brand-mark {
     color: var(--ivory);
     font-family:
-      "Iowan Old Style",
-      "Palatino Linotype",
-      "Book Antiqua",
-      serif;
+      "Gugi",
+      "Noto Sans KR",
+      sans-serif;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0;
@@ -187,11 +183,9 @@ select {
   .section-title {
     color: var(--ivory);
     font-family:
-      "Iowan Old Style",
-      "Palatino Linotype",
-      "Book Antiqua",
-      "Noto Serif KR",
-      serif;
+      "Gugi",
+      "Noto Sans KR",
+      sans-serif;
     letter-spacing: 0;
     text-wrap: balance;
   }
@@ -316,6 +310,11 @@ select {
 
   .section-heading {
     position: relative;
+  }
+
+  .section-heading p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .section-title {

@@ -3,30 +3,28 @@ import type { ArchiveEntry, Capability, Project, SiteData } from "@/types";
 export const site: SiteData = {
   name: "신미래",
   nameEn: "Mirae Shin",
-  headline: "2D Motion Graphic / Ads Visual Designer",
+  headline: "Motion Graphic / AI Video Designer",
   intro:
-    "브랜드와 콘텐츠가 가진 장면, 무드, 카피를 짧은 영상과 이미지 광고 소재로 풀어내는 작업을 해왔습니다.\nAfter Effects, Photoshop, Illustrator를 중심으로 키비주얼을 다듬고, 텍스트 모션과 컷 편집을 더해 모바일 환경에서 빠르게 읽히는 화면을 만듭니다.",
+    "기획과 Workflow 구성 전반에 AI를 활용하고, Generative AI로 만든 이미지와 영상 소스를 바탕으로, After Effects와 Premiere Pro에서 컷 흐름, 텍스트 모션, 색감과 후반 보정을 다듬습니다.\nPhotoshop, Illustrator 등의 이미지 편집 툴과 3D모델링 툴을 함께 활용하여 완성도 높은 비쥬얼을 추구합니다.",
   email: "miraetto@gmail.com",
   itchUrl: "https://wouldyoubemyday.itch.io/galaxy-is-an-excuse",
   keywords: [
-    "2D Motion Graphic",
-    "Short-form Motion Ads",
-    "PV / Teaser",
-    "Ads Visual Design",
+    "Motion Graphic",
+    "Visual Design",
     "Image Ads",
     "After Effects",
     "Premiere Pro",
     "Photoshop",
     "Illustrator",
-    "AI-assisted Study",
-    "3D Basic"
+    "Generative AI Video",
+    "AI Workflow"
   ],
   navItems: [
     { href: "#advertising-works", label: "Selected" },
     { href: "#social-motion", label: "Motion Ads" },
-    { href: "#game-marketing", label: "PV / Teaser" },
-    { href: "#web-banner", label: "Image Ads" },
     { href: "#motion-design-archive", label: "Studies" },
+    { href: "#game-marketing", label: "AI" },
+    { href: "#web-banner", label: "Image Ads" },
     { href: "#skills-about", label: "Skills" },
     { href: "#contact", label: "Contact" }
   ]
@@ -34,44 +32,74 @@ export const site: SiteData = {
 
 export const capabilities: Capability[] = [
   {
-    title: "2D Motion Graphic",
+    title: "VIDEO / MOTION",
     description:
-      "After Effects를 중심으로 이미지, 타이포, 키비주얼을 짧은 모션 광고 형태로 구성합니다.",
-    tools: ["After Effects", "text motion", "key visual motion", "short-form edit"]
+      "촬영 소스와 AI 생성 영상을 편집, 합성, 모션그래픽으로 다듬어 영상의 흐름을 만듭니다.",
+    tools: ["Premiere Pro", "After Effects", "CapCut", "DSLR / Camera"]
   },
   {
-    title: "PV / Teaser Video",
+    title: "DESIGN",
     description:
-      "프로젝트의 분위기와 핵심 장면을 짧은 티저 흐름으로 정리하고, 컷 전환과 텍스트 타이밍을 맞춥니다.",
-    tools: ["After Effects", "Premiere Pro", "teaser edit", "story pacing"]
+      "이미지 보정, 그래픽 레이아웃, 화면 구성, 3D 에셋 활용을 통해 비주얼을 만듭니다.",
+    tools: ["Photoshop", "Illustrator", "Figma", "Blender"]
   },
   {
-    title: "Ads Visual Design",
+    title: "GENERATIVE AI",
     description:
-      "광고 목적에 맞게 이미지, 카피, 레이아웃을 정리하고 모바일 화면에서 먼저 보여야 할 요소를 잡습니다.",
-    tools: ["Photoshop", "Illustrator", "key visual", "campaign visual"]
+      "AI 이미지·영상·음악 툴을 활용해 콘셉트 탐색, 소스 생성, 제작 워크플로우를 구성합니다.",
+    tools: ["Magnific", "Higgsfield", "Kling", "ComfyUI", "Suno", "ChatGPT", "GPT Image"]
   },
   {
-    title: "Image Ads / Banner Design",
+    title: "DOCUMENTATION",
     description:
-      "작은 광고 영역 안에서도 핵심 이미지, 문구, CTA가 빠르게 보이도록 배너형 소재를 제작합니다.",
-    tools: ["image ads", "banner design", "layout design", "SNS creative"]
+      "기획 의도와 결과물을 자료화하고, 콘텐츠 리스트와 문서를 정리해 협업에 필요한 형태로 만듭니다.",
+    tools: ["PowerPoint", "Excel", "Word"]
   },
   {
-    title: "Compositing / VFX Basic",
+    title: "COMMUNICATION",
     description:
-      "이미지 보정, 합성, 간단한 이펙트를 활용해 영상의 분위기와 전환감을 보완합니다.",
-    tools: ["Photoshop", "After Effects", "compositing", "VFX basic"]
-  },
-  {
-    title: "AI-assisted Study / 3D Basic",
-    description:
-      "AI와 3D 툴은 보조 실험 영역으로 활용하며, 필요한 장면 표현과 아이디어 탐색에 적용하고 있습니다.",
-    tools: ["AI-assisted study", "Blender basic", "3D camera motion", "visual exploration"]
+      "영어 기반 협업과 피드백 커뮤니케이션을 통해 마케팅·콘텐츠 제작 과정에 참여할 수 있습니다.",
+    tools: ["English conversational"]
   }
 ];
 
 export const projects: Project[] = [
+  {
+    slug: "weasy-concept-film",
+    title: "WEASY 아이돌 컨셉 뮤직필름",
+    titleEn: "WEASY Concept Music Film",
+    type: "AI Short-form Contest Entry / Idol Concept Film",
+    description:
+      "우리카드 AI 숏폼 공모전 참여작으로, 아이돌 모델 WEASY의 매력을 뮤직비디오·컨셉필름 톤의 9:16 숏폼 영상으로 표현했습니다.",
+    details: [
+      {
+        label: "Brief",
+        value:
+          "우리카드 AI 숏폼 공모전 참여작으로, 아이돌 모델 WEASY의 매력을 뮤직비디오·컨셉필름 톤의 9:16 숏폼 영상으로 표현했습니다."
+      },
+      {
+        label: "Role",
+        value: "콘셉트 기획, 생성형 AI 영상 제작, 컷 구성, 리듬 편집, 후반 보정"
+      },
+      {
+        label: "Deliverables",
+        value: "9:16 AI short-form video, concept music film"
+      },
+      {
+        label: "Design Focus",
+        value:
+          "WEASY가 아이돌처럼 보이도록 표정, 포즈, 카메라 움직임의 연결감을 맞추고, 음악적인 흐름의 컷 전환으로 캐릭터의 분위기가 먼저 전달되도록 구성했습니다."
+      },
+      {
+        label: "Tools",
+        value: "ComfyUI, Kling, Suno, Premiere Pro, GPT Image"
+      }
+    ],
+    tools: ["ComfyUI", "Kling", "Suno", "Premiere Pro", "GPT Image"],
+    mediaType: "video",
+    mediaSrc: "/videos/wooricard-sequence-01.mp4",
+    aspectRatio: "portrait"
+  },
   {
     slug: "beauty-instastory",
     title: "키비주얼 중심의 숏폼 모션 콘텐츠",
@@ -99,18 +127,17 @@ export const projects: Project[] = [
       },
       {
         label: "Tools",
-        value: "Photoshop, Illustrator, After Effects"
+        value: "Photoshop, Illustrator, After Effects, GPT Image"
       }
     ],
-    tools: ["Photoshop", "Illustrator", "After Effects"],
+    tools: ["Photoshop", "Illustrator", "After Effects", "GPT Image"],
     mediaType: "video",
     mediaSrc: "/videos/scs-instastory-page3.mp4",
     aspectRatio: "portrait"
   },
   {
     slug: "day6-fangame",
-    title: "PV / 티저 영상 케이스",
-    titleEn: "PV / Teaser Video",
+    title: "1인게임개발 및 Teaser영상",
     type: "IP-inspired Teaser / Side Project",
     description:
       "직접 만든 2D 프로젝트를 짧은 티저 영상과 홍보 비주얼로 정리했습니다.",
@@ -138,15 +165,52 @@ export const projects: Project[] = [
       },
       {
         label: "Tools",
-        value: "Photoshop, After Effects, Godot"
+        value: "ChatGPT, Photoshop, After Effects, Sora"
       }
     ],
-    tools: ["Photoshop", "After Effects", "Godot"],
+    tools: ["ChatGPT", "Photoshop", "After Effects", "Sora"],
     href: "https://wouldyoubemyday.itch.io/galaxy-is-an-excuse",
     ctaLabel: "View Teaser Side Project",
     mediaType: "video",
     mediaSrc: "/videos/day6-teaser.mp4",
     aspectRatio: "landscape"
+  },
+  {
+    slug: "babttori-web-service",
+    title: "점심 메뉴 추천 웹서비스",
+    type: "AI-assisted Web Service / Lunch Recommendation",
+    description:
+      "점심 예산과 메뉴 취향을 바탕으로 오늘의 메뉴 조합과 근처 후보를 추천하는 웹서비스입니다.",
+    details: [
+      {
+        label: "Brief",
+        value:
+          "점심 메뉴를 빠르게 고를 수 있도록 예산, 메뉴 카테고리, 근처 후보를 한 화면에서 정리한 웹서비스입니다."
+      },
+      {
+        label: "Role",
+        value: "서비스 기획, UI 디자인, 프론트엔드 개발, AI 활용 기획·구현 보조"
+      },
+      {
+        label: "Deliverables",
+        value: "Responsive web service, lunch menu recommendation UI"
+      },
+      {
+        label: "Design Focus",
+        value:
+          "픽셀 감성의 그래픽과 간단한 선택 흐름을 활용해 점심 메뉴를 고르는 과정이 가볍고 재미있게 느껴지도록 구성했습니다."
+      },
+      {
+        label: "Tools",
+        value: "ChatGPT, Next.js, Vercel"
+      }
+    ],
+    tools: ["ChatGPT", "Next.js", "Vercel"],
+    href: "https://babttori.vercel.app/",
+    ctaLabel: "View Web Service",
+    mediaType: "image",
+    mediaSrc: "/images/babttori-home.png",
+    aspectRatio: "square"
   }
 ];
 
@@ -333,7 +397,7 @@ export const archiveEntries: ArchiveEntry[] = [
 
 export const pageContent = {
   hero: {
-    subtitle: "짧은 시간 안에 분위기와 메시지가 읽히는 모션 광고를 만듭니다.",
+    subtitle: "AI와 모션그래픽을 활용해 영상 안에 브랜드의 분위기를 담습니다.",
     primaryActionLabel: "View Works",
     secondaryActionLabel: "Contact",
     badgeLabel: "",
@@ -356,9 +420,8 @@ export const pageContent = {
   },
   advertisingWorks: {
     sectionLabel: "Selected",
-    sectionTitle: "Selected Motion / Ads Work",
-    description:
-      "정적인 키비주얼에 작은 움직임을 더해 브랜드의 분위기가 자연스럽게 살아나도록 만든 모션 광고 작업입니다. 제품 이미지, 카피, 그래픽 요소가 과하지 않게 어우러지도록 속도와 여백을 조정했습니다."
+    sectionTitle: "Selected Works",
+    description: ""
   },
   socialMotion: {
     sectionLabel: "Motion Ads",
@@ -370,13 +433,13 @@ export const pageContent = {
     sectionLabel: "Image Ads",
     sectionTitle: "Image Ads / Banner Design",
     description:
-      "작은 영역 안에서도 브랜드 이미지, 핵심 문구, CTA가 먼저 보이도록 정리한 이미지 광고와 배너 작업입니다."
+      "작은 영역에서도 브랜드 이미지, 핵심 문구, CTA가 먼저 보이도록 정리한 이미지 광고·배너입니다."
   },
   gameMarketing: {
-    sectionLabel: "PV",
-    sectionTitle: "PV / Teaser Video",
+    sectionLabel: "AI",
+    sectionTitle: "AI Project",
     description:
-      "직접 만든 2D 프로젝트를 짧은 티저 영상과 홍보 비주얼로 정리한 케이스입니다.",
+      "AI를 활용하여 웹서비스, 게임 개발, 티저 영상 등을 만들었습니다.",
     placeholderTitle: "PV / 티저 케이스 준비 중",
     placeholderDescription:
       "웹툰·캐릭터 IP를 가정한 PV, 키비주얼, 숏폼 모션 구성을 정리할 예정입니다."
@@ -385,7 +448,7 @@ export const pageContent = {
     sectionLabel: "Studies",
     sectionTitle: "Motion / VFX / 3D Studies",
     description:
-      "모션 광고 작업에 응용할 수 있는 쇼릴, 3D 카메라 모션, VFX, AI 보조 비주얼 테스트입니다."
+      "영상 작업에 응용할 수 있는 툴활용 쇼릴, 3D 카메라 모션, VFX 작업입니다."
   },
   skillsAbout: {
     sectionLabel: "Skills",
@@ -402,9 +465,9 @@ export const pageContent = {
   contact: {
     sectionLabel: "Contact",
     sectionTitle: "함께 만들 이야기가 있다면",
-    description: "2D Motion Graphic · PV / Teaser · Ads Visual Design",
+    description: "Motion Graphic / AI Video Design",
     supportText:
-      "2D Motion Graphic · Short-form Motion Ads · PV / Teaser · Image Ads"
+      "AI Video Designer"
   },
   notFound: {
     codeLabel: "404",

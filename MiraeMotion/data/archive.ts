@@ -14,7 +14,7 @@ const CATEGORY_BY_SLUG: Record<string, ArchiveEntry["category"]> = {
   "scs-instastory-page3": "Short-form Motion Ads",
   "cpf-instastory-01": "Short-form Motion Ads",
   "sneaker-commerce-hero-ui": "Image Ads",
-  "untitled-2": "Image Ads / Motion Study",
+  "untitled-2": "Short-form Motion Ads",
   "radiant-matte": "Image Ads",
   "hyaluponic-set": "Image Ads",
   "m8s-squad": "Character Visual",

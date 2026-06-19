@@ -15,7 +15,12 @@ export function GameMarketingSpec() {
         />
         <div className="mt-12 space-y-8 md:space-y-10">
           {gameProjects.map((project, index) => (
-            <ProjectCard key={project.slug} project={project} index={index} />
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              index={index}
+              compactDetails
+            />
           ))}
         </div>
       </Container>

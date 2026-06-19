@@ -6,15 +6,23 @@ import type { Project } from "@/types";
 type ProjectCardProps = {
   project: Project;
   index: number;
+  compactDetails?: boolean;
 };
 
-export function ProjectCard({ project, index }: ProjectCardProps) {
+export function ProjectCard({ project, index, compactDetails = false }: ProjectCardProps) {
   const isPrimaryProject = index === 0;
   const hasStructuredDetails = Boolean(project.details?.length);
   const mediaAspect =
     project.aspectRatio === "portrait"
       ? "mx-auto aspect-[9/16] w-full max-w-[420px]"
+      : project.aspectRatio === "square"
+        ? "mx-auto aspect-square w-full max-w-[520px]"
       : "aspect-video w-full";
+  const imageFitClass =
+    project.aspectRatio === "square" ? "object-contain" : "object-cover";
+  const detailListClass = compactDetails
+    ? "mt-5 grid gap-3 text-xs leading-5 md:text-sm md:leading-6"
+    : "mt-6 grid gap-4 text-sm leading-6 md:text-base md:leading-7";
   const sourceType = project.mediaSrc.endsWith(".mp4") ? "video/mp4" : undefined;
 
   return (
@@ -31,7 +39,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 src={project.mediaSrc}
                 alt={project.title}
                 fill
-                className="object-cover"
+                className={imageFitClass}
                 sizes="(max-width: 768px) 100vw, 60vw"
               />
             ) : (
@@ -59,7 +67,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               {project.type ? <span className="meta-chip">{project.type}</span> : null}
             </div>
             {project.titleEn ? (
-              <p className="mt-5 font-serif text-3xl leading-tight text-ivory md:text-5xl">
+              <p className="mt-5 text-3xl font-semibold leading-tight text-ivory md:text-5xl">
                 {project.titleEn}
               </p>
             ) : null}
@@ -67,7 +75,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               {project.title}
             </h3>
             {project.details ? (
-              <dl className="mt-6 grid gap-4 text-sm leading-6 md:text-base md:leading-7">
+              <dl className={detailListClass}>
                 {project.details.map((detail) => (
                   <div key={detail.label} className="detail-row">
                     <dt>{detail.label}</dt>
