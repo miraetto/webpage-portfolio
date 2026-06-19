@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Paperlogy";
+  src: url("/fonts/Paperlogy-6SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Paperlogy";
+  src: url("/fonts/Paperlogy-7Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --bg: #0b0d10;
   --fg: #f3ead8;
@@ -116,7 +132,7 @@ select {
   .brand-mark {
     color: var(--ivory);
     font-family:
-      "Gugi",
+      "Paperlogy",
       "Noto Sans KR",
       sans-serif;
     font-size: 1rem;
@@ -183,7 +199,7 @@ select {
   .section-title {
     color: var(--ivory);
     font-family:
-      "Gugi",
+      "Paperlogy",
       "Noto Sans KR",
       sans-serif;
     letter-spacing: 0;
@@ -194,7 +210,7 @@ select {
     margin-top: 1rem;
     font-size: 3.1rem;
     line-height: 1.02;
-    font-weight: 600;
+    font-weight: 700;
     overflow-wrap: break-word;
   }
 
