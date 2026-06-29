@@ -24,12 +24,12 @@ const config = {
         serif: ["Noto Sans KR", "sans-serif"]
       },
       boxShadow: {
-        soft: "0 22px 70px rgba(0, 0, 0, 0.3)",
-        gold: "0 0 0 1px rgba(199, 166, 91, 0.28), 0 18px 60px rgba(0, 0, 0, 0.36)"
+        soft: "0 22px 70px rgba(12, 8, 10, 0.34)",
+        gold: "0 0 0 1px rgba(213, 160, 147, 0.24), 0 18px 60px rgba(12, 8, 10, 0.38)"
       },
       backgroundImage: {
         glow:
-          "radial-gradient(circle at top, rgba(199, 166, 91, 0.12) 0%, rgba(199, 166, 91, 0) 44%)"
+          "radial-gradient(circle at top, rgba(213, 160, 147, 0.12) 0%, rgba(213, 160, 147, 0) 44%)"
       }
     }
   },

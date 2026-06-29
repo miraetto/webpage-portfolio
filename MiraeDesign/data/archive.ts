@@ -17,21 +17,21 @@ const CATEGORY_BY_SLUG: Record<string, ArchiveEntry["category"]> = {
   "untitled-2": "Short-form Motion Ads",
   "radiant-matte": "Image Ads",
   "hyaluponic-set": "Image Ads",
-  "m8s-squad": "Character Visual",
+  "m8s-squad": "AI Visual Study",
   "magical-girl-transformation": "3D Basic",
   "blender-camera-motion": "3D Basic",
   "unity-vfx-01": "VFX Basic"
 };
 
 const PRIORITY_ORDER = [
-  "mirae-showreel",
   "scs-instastory-page3",
   "cpf-instastory-01",
-  "gss-day1-page1",
-  "instastory-page2",
-  "day6-teaser",
   "hyaluponic-set",
   "radiant-matte",
+  "gss-day1-page1",
+  "instastory-page2",
+  "mirae-showreel",
+  "day6-teaser",
   "blender-camera-motion"
 ] as const;
 

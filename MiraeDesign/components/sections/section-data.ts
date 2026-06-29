@@ -13,7 +13,9 @@ const getProjectItems = (slugs: string[]) =>
 
 export const advertisingProjects = projects.filter(
   (project) =>
-    project.slug === "weasy-concept-film" || project.slug === "beauty-instastory"
+    project.slug === "beauty-instastory" ||
+    project.slug === "commerce-image-ad-set" ||
+    project.slug === "weasy-concept-film"
 );
 
 export const gameProjects = getProjectItems([

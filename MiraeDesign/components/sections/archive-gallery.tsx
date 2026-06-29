@@ -63,8 +63,8 @@ export function ArchiveGallery({ items }: ArchiveGalleryProps) {
                   className={[
                     "rounded-full border px-4 py-2 text-sm font-medium tracking-[0.04em] transition-all duration-200",
                     isActive
-                      ? "border-[var(--deep)] bg-[var(--deep)] text-white shadow-soft"
-                      : "border-black/10 bg-white/60 text-muted hover:-translate-y-0.5 hover:border-black/20 hover:bg-white/80 hover:text-[var(--deep)]"
+                      ? "border-[var(--gold)] bg-[var(--deep)] text-ivory shadow-soft"
+                      : "border-line bg-[rgba(246,235,228,0.06)] text-muted hover:-translate-y-0.5 hover:border-[var(--gold)] hover:bg-[rgba(213,160,147,0.1)] hover:text-ivory"
                   ].join(" ")}
                   aria-pressed={isActive}
                 >

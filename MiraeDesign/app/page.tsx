@@ -14,10 +14,10 @@ export default function HomePage() {
       <SiteHeader />
       <Hero />
       <AdvertisingWorks />
-      <SocialMotion />
-      <MotionDesignArchive />
-      <GameMarketingSpec />
       <WebBannerSection />
+      <SocialMotion />
+      <GameMarketingSpec />
+      <MotionDesignArchive />
       <SkillsAbout />
       <Contact />
     </main>
